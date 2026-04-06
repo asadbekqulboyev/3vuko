@@ -1,0 +1,208 @@
+.header {
+  background: linear-gradient(
+    134.12deg,
+    rgba(0, 0, 0, 0.54) 1.49%,
+    rgba(0, 0, 0, 0.45) 100%
+  );
+  backdrop-filter: blur(10px);
+  padding: 15px 0 0;
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  &_top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ffffff21;
+  }
+  &_left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  &_logo {
+    display: flex;
+    text-decoration: none;
+    align-items: center;
+    gap: 10px;
+    padding-right: 20px;
+    border-right: 1px solid #ffffff21;
+    &_text {
+      display: flex;
+      flex-direction: column;
+      span {
+        letter-spacing: 7px;
+        color: #828282;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+      b {
+        color: #fff;
+        font-family: "Jost";
+        font-size: 17px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        text-transform: uppercase;
+      }
+    }
+  }
+  .info {
+    color: #828282;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  &_right {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    &_social {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+      list-style: none;
+      li {
+        a {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 15px;
+          border-radius: 5px;
+          border: 1px solid rgba(255, 255, 255, 0.2);
+          svg path {
+            transition: all 0.3s ease;
+          }
+          &:hover {
+            svg path {
+              fill: #22b5ff;
+            }
+          }
+        }
+      }
+    }
+  }
+  &_contact {
+    display: flex;
+    flex-direction: column;
+    a {
+      color: #fff;
+      font-family: "Buyan";
+      font-size: 28px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      text-decoration: none;
+    }
+    span {
+      color: #828282;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+  }
+  &_order {
+    border-radius: 5px;
+    border: 1px solid #e03131;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    text-decoration: none;
+    padding: 8px 24.5px;
+    span {
+      color: #fff;
+      font-family: "Buyan";
+      font-size: 22px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      text-transform: uppercase;
+    }
+  }
+  &_menu {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 15px;
+    & > li {
+      position: relative;
+      list-style: none;
+      padding-bottom: 15px;
+      display: flex;
+      gap: 48px;
+      align-items: center;
+      & > a {
+        color: #fff;
+        font-family: "Manrope";
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-decoration: none;
+        transition: all 0.3s linear;
+      }
+    }
+    & > li > img {
+      flex: 0 0 auto;
+    }
+    .dropdown_menu {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      svg {
+        transition: all 0.3s ease;
+        fill: #fff;
+      }
+    }
+    .dropdown_submenu {
+      position: absolute;
+      border-radius: 0 0 0 10px;
+      background: rgba(17, 17, 17, 0.9);
+      backdrop-filter: blur(10px);
+      padding: 0px 20px 0px;
+      height: 0;
+      overflow: hidden;
+      top: 40px;
+      transition: all 0.3s ease;
+      min-width: 530px;
+      ul {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        list-style: none;
+      }
+      a {
+        color: #fff;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-decoration: none;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #272727;
+        display: flex;
+        width: 100%;
+      }
+    }
+    & > li:hover {
+      color: #e03131;
+
+      & > a {
+        color: #e03131;
+      }
+      svg path {
+        fill: #e03131;
+      }
+      .dropdown_submenu {
+        height: auto;
+        overflow: visible;
+        padding: 20px 20px 31px;
+      }
+    }
+  }
+}

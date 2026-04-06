@@ -1,0 +1,378 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Manrope:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+.header {
+  background: linear-gradient(134.12deg, rgba(0, 0, 0, 0.54) 1.49%, rgba(0, 0, 0, 0.45) 100%);
+  backdrop-filter: blur(10px);
+  padding: 15px 0 0;
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  left: 0;
+  top: 0;
+}
+.header_top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1294117647);
+}
+.header_left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.header_logo {
+  display: flex;
+  text-decoration: none;
+  align-items: center;
+  gap: 10px;
+  padding-right: 20px;
+  border-right: 1px solid rgba(255, 255, 255, 0.1294117647);
+}
+.header_logo_text {
+  display: flex;
+  flex-direction: column;
+}
+.header_logo_text span {
+  letter-spacing: 7px;
+  color: #828282;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.header_logo_text b {
+  color: #fff;
+  font-family: "Jost";
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+}
+.header .info {
+  color: #828282;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.header_right {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+.header_right_social {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  list-style: none;
+}
+.header_right_social li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  border-radius: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.header_right_social li a svg path {
+  transition: all 0.3s ease;
+}
+.header_right_social li a:hover svg path {
+  fill: #22b5ff;
+}
+.header_contact {
+  display: flex;
+  flex-direction: column;
+}
+.header_contact a {
+  color: #fff;
+  font-family: "Buyan";
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-decoration: none;
+}
+.header_contact span {
+  color: #828282;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.header_order {
+  border-radius: 5px;
+  border: 1px solid #e03131;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  text-decoration: none;
+  padding: 8px 24.5px;
+}
+.header_order span {
+  color: #fff;
+  font-family: "Buyan";
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+}
+.header_menu {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 15px;
+}
+.header_menu > li {
+  position: relative;
+  list-style: none;
+  padding-bottom: 15px;
+  display: flex;
+  gap: 48px;
+  align-items: center;
+}
+.header_menu > li > a {
+  color: #fff;
+  font-family: "Manrope";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration: none;
+  transition: all 0.3s linear;
+}
+.header_menu > li > img {
+  flex: 0 0 auto;
+}
+.header_menu .dropdown_menu {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.header_menu .dropdown_menu svg {
+  transition: all 0.3s ease;
+  fill: #fff;
+}
+.header_menu .dropdown_submenu {
+  position: absolute;
+  border-radius: 0 0 0 10px;
+  background: rgba(17, 17, 17, 0.9);
+  backdrop-filter: blur(10px);
+  padding: 0px 20px 0px;
+  height: 0;
+  overflow: hidden;
+  top: 40px;
+  transition: all 0.3s ease;
+  min-width: 530px;
+}
+.header_menu .dropdown_submenu ul {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  list-style: none;
+}
+.header_menu .dropdown_submenu a {
+  color: #fff;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration: none;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #272727;
+  display: flex;
+  width: 100%;
+}
+.header_menu > li:hover {
+  color: #e03131;
+}
+.header_menu > li:hover > a {
+  color: #e03131;
+}
+.header_menu > li:hover svg path {
+  fill: #e03131;
+}
+.header_menu > li:hover .dropdown_submenu {
+  height: auto;
+  overflow: visible;
+  padding: 20px 20px 31px;
+}
+
+.hero {
+  background: url("../images/hero.png") no-repeat center center;
+  background-size: cover;
+  padding-top: 135px;
+  padding-bottom: 105px;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  position: sticky;
+  top: 0;
+}
+.hero_content {
+  display: flex;
+  flex-direction: column;
+}
+.hero_toptitle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.hero_toptitle span {
+  color: #fff;
+  font-family: "Manrope";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 3.2px;
+}
+.hero_title {
+  color: #f2f2f2;
+  font-family: "Buyan";
+  font-size: 120px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+}
+.hero_title span {
+  color: #e03131;
+}
+.hero_description {
+  color: #fff;
+  font-family: "Manrope";
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px;
+}
+.hero_bottom {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.hero_bottom .button {
+  padding: 24.5px 28.5px;
+  display: flex;
+  gap: 18px;
+}
+.hero_tags {
+  display: flex;
+  max-width: 651px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.hero_tags > span {
+  border-radius: 5px;
+  border: 1px solid #282828;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(2.5px);
+  color: #fff;
+  font-family: "Manrope";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  padding: 11.5px 20px;
+  line-height: normal;
+}
+.hero_tags > span span {
+  color: #e03131;
+}
+.hero .bottom_badge {
+  padding: 30px 0;
+  border-top: 1px solid #3f3f3f;
+  border-bottom: 1px solid #3f3f3f;
+  margin-bottom: 0;
+  margin-top: auto;
+  position: absolute;
+  margin-top: auto;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+.hero .bottom_badge .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+.hero .bottom_badge_item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  color: #fff;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+}
+
+.services {
+  position: sticky;
+  min-height: 100dvh;
+  background: #000;
+}
+.services .container {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.services_content {
+  display: flex;
+  justify-content: space-between;
+}
+.services_toptitle {
+  color: #828282;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 3.2px;
+}
+
+@font-face {
+  font-family: "Buyan";
+  src: url(../fonts/BuyanBold.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Manrope";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: 0%;
+  background: #0c0c0c;
+}
+
+.container {
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.button {
+  border-radius: 5px;
+  background: radial-gradient(76.16% 76.16% at 31.97% 19.67%, rgba(255, 173, 173, 0.7) 0%, rgba(255, 173, 173, 0) 69.79%, rgba(255, 173, 173, 0) 100%), #c21c1c;
+  color: #fff;
+  font-family: "Buyan";
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+main {
+  position: relative;
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,22 @@
+.services {
+  position: sticky;
+  min-height: 100dvh;
+  background: #000;
+  .container {
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+  &_content {
+    display: flex;
+    justify-content: space-between;
+  }
+  &_toptitle {
+    color: #828282;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 3.2px;
+  }
+}

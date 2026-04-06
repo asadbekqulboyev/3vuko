@@ -1,0 +1,111 @@
+.hero {
+  background: url("../images/hero.png") no-repeat center center;
+  background-size: cover;
+  padding-top: 135px;
+  padding-bottom: 105px;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  &_content {
+    display: flex;
+    flex-direction: column;
+  }
+  &_toptitle {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    span {
+      color: #fff;
+      font-family: "Manrope";
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      letter-spacing: 3.2px;
+    }
+  }
+  &_title {
+    color: #f2f2f2;
+    font-family: "Buyan";
+    font-size: 120px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    span {
+      color: #e03131;
+    }
+  }
+  &_description {
+    color: #fff;
+    font-family: "Manrope";
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px;
+  }
+  &_bottom {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    .button {
+      padding: 24.5px 28.5px;
+      display: flex;
+      gap: 18px;
+    }
+  }
+  &_tags {
+    display: flex;
+    max-width: 651px;
+    flex-wrap: wrap;
+    gap: 10px;
+    & > span {
+      border-radius: 5px;
+      border: 1px solid #282828;
+      background: rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(2.5px);
+      color: #fff;
+      font-family: "Manrope";
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      padding: 11.5px 20px;
+      line-height: normal;
+      span {
+        color: #e03131;
+      }
+    }
+  }
+  .bottom_badge {
+    padding: 30px 0;
+    border-top: 1px solid #3f3f3f;
+    border-bottom: 1px solid #3f3f3f;
+    margin-bottom: 0;
+    margin-top: auto;
+    position: absolute;
+    margin-top: auto;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+    &_item {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      color: #fff;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 22px;
+    }
+  }
+}
