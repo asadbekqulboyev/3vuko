@@ -2,6 +2,7 @@
 @import "_header";
 @import "_hero";
 @import "services";
+@import "projects";
 @font-face {
   font-family: "Buyan";
   src: url(../fonts/BuyanBold.ttf);
@@ -18,6 +19,9 @@ body {
   line-height: 22px;
   letter-spacing: 0%;
   background: #0c0c0c;
+}
+.wrapper {
+  overflow: hidden;
 }
 .container {
   width: 100%;
@@ -44,6 +48,17 @@ body {
   text-transform: uppercase;
   text-decoration: none;
 }
-main{
+main {
   position: relative;
+}
+.section_title {
+  color: #0c0c0c;
+  display: flex;
+  align-items: center;
+  font-family: "Buyan";
+  font-size: 56px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  gap: 10px;
 }

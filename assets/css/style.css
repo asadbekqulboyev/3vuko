@@ -312,18 +312,18 @@
 }
 
 .services {
-  position: sticky;
   min-height: 100dvh;
   background: #000;
-}
-.services .container {
   display: flex;
   align-items: center;
-  height: 100%;
+  padding: 100px 0;
 }
 .services_content {
   display: flex;
   justify-content: space-between;
+}
+.services .container {
+  position: relative;
 }
 .services_toptitle {
   color: #828282;
@@ -332,6 +332,310 @@
   font-weight: 400;
   line-height: normal;
   letter-spacing: 3.2px;
+}
+.services_title {
+  color: #fff;
+  font-family: "Buyan";
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.services_title .red {
+  color: #e03131;
+}
+.services_title .services_btn {
+  border-radius: 5px;
+  border: 1px solid #282828;
+  background: #fff;
+  backdrop-filter: blur(2.5px);
+  color: #0c0c0c;
+  font-family: "Manrope";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+  padding: 11.5px 20px;
+  position: relative;
+  top: -17px;
+}
+.services_video {
+  position: relative;
+}
+.services_video .play_img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.services_text {
+  color: #afafaf;
+  font-family: "Manrope";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px;
+  margin-top: 50px;
+}
+.services_text.gray {
+  color: #828282;
+  margin-top: 10px;
+}
+.services .big_text {
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #323232;
+  font-family: "Buyan";
+  font-size: 250px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  position: absolute;
+  bottom: 0;
+  left: -20%;
+  right: auto;
+  z-index: -1;
+}
+
+.projects {
+  padding: 96px 0;
+  border-radius: 50px 50px 0 0;
+  background: #f4f4f4 url("../images/project_bg.png") no-repeat bottom center;
+  background-size: 100%;
+  min-height: 100dvh;
+}
+.projects_top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+.projects_top p {
+  max-width: 530px;
+}
+.projects .music_block {
+  border-radius: 10px;
+  background: #fff;
+  padding: 65px 30px 30px 30px;
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 42px;
+  align-items: start;
+}
+.projects .music_cover_wrap {
+  position: relative;
+  width: 100%;
+  max-width: 220px;
+}
+.projects .music_cover {
+  width: 100%;
+  height: 285px;
+  object-fit: cover;
+  display: block;
+  border-radius: 6px;
+}
+.projects .music_cover_number {
+  position: absolute;
+  top: -22px;
+  right: -12px;
+  width: 58px;
+  height: 58px;
+  border-radius: 4px;
+  background: #2b2b2b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-family: Buyan, sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+}
+.projects .music_content {
+  width: 100%;
+  min-width: 0;
+}
+.projects .music_list {
+  list-style: none;
+}
+.projects .music_item {
+  padding: 14px 0;
+  border-bottom: 1px solid #e9e9e9;
+  position: relative;
+}
+.projects .music_item:last-child {
+  border-bottom: none;
+}
+.projects .music_row {
+  display: grid;
+  grid-template-columns: 40px 1fr 30px 56px;
+  align-items: center;
+  column-gap: 14px;
+  min-height: 40px;
+}
+.projects .music_item_left {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.projects .music_index {
+  color: #b2b2b2;
+  font-family: Poppins, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+.projects .music_play_btn {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 20px;
+  background: #e03131;
+  display: flex;
+  width: 40px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  flex-shrink: 0;
+}
+.projects .music_play_btn svg {
+  width: 16px;
+  height: 16px;
+  display: block;
+}
+.projects .music_info {
+  min-width: 0;
+}
+.projects .music_title {
+  color: #0c0c0c;
+  font-family: Manrope, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: color 0.2s ease;
+}
+.projects .music_author {
+  margin-top: 2px;
+  color: #828282;
+  font-family: Manrope, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: normal;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: color 0.2s ease;
+}
+.projects .music_item.is_active .music_title,
+.projects .music_item.is_active .music_author {
+  color: #e03131;
+}
+.projects .music_sound {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.projects .music_sound svg {
+  width: 30px;
+  height: 30px;
+  display: block;
+}
+.projects .music_time {
+  justify-self: end;
+  color: #b2b2b2;
+  font-family: Poppins, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+.projects .music_progress {
+  width: 100%;
+  margin-top: 10px;
+  position: absolute;
+}
+.projects .music_item.is_active .music_progress {
+  display: block;
+}
+.projects .music_progress_bar {
+  position: relative;
+  width: 100%;
+  height: 1px;
+  border-radius: 999px;
+  background: #e9e9e9;
+  overflow: hidden;
+  cursor: pointer;
+}
+.projects .music_progress_current {
+  width: 0%;
+  height: 100%;
+  border-radius: 999px;
+  background: #e03131;
+  transition: width 0.1s linear;
+}
+.projects .music_footer {
+  margin-top: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.projects .music_update {
+  color: #b2b2b2;
+  font-family: Manrope, sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+}
+.projects .music_more_btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #fff;
+  font-family: Buyan, sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-radius: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: #0c0c0c;
+  padding: 8px 16px;
+}
+@media (max-width: 900px) {
+  .projects .music_block {
+    grid-template-columns: 1fr;
+  }
+  .projects .music_cover_wrap {
+    max-width: 260px;
+  }
+}
+@media (max-width: 640px) {
+  .projects .music_block {
+    padding: 30px 18px 20px 18px;
+    gap: 24px;
+  }
+  .projects .music_row {
+    grid-template-columns: 40px 1fr 30px 45px;
+    column-gap: 10px;
+  }
+  .projects .music_title,
+  .projects .music_author,
+  .projects .music_time,
+  .projects .music_index {
+    font-size: 14px;
+  }
+  .projects .music_progress {
+    padding-left: 50px;
+  }
+  .projects .music_more_btn {
+    font-size: 18px;
+  }
 }
 
 @font-face {
@@ -351,6 +655,10 @@ body {
   line-height: 22px;
   letter-spacing: 0%;
   background: #0c0c0c;
+}
+
+.wrapper {
+  overflow: hidden;
 }
 
 .container {
@@ -375,4 +683,16 @@ body {
 
 main {
   position: relative;
+}
+
+.section_title {
+  color: #0c0c0c;
+  display: flex;
+  align-items: center;
+  font-family: "Buyan";
+  font-size: 56px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  gap: 10px;
 }/*# sourceMappingURL=style.css.map */

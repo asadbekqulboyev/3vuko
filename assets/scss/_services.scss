@@ -1,15 +1,16 @@
 .services {
-  position: sticky;
+  //   position: sticky;
   min-height: 100dvh;
   background: #000;
-  .container {
-    display: flex;
-    align-items: center;
-    height: 100%;
-  }
+  display: flex;
+  align-items: center;
+  padding: 100px 0;
   &_content {
     display: flex;
     justify-content: space-between;
+  }
+  .container {
+    position: relative;
   }
   &_toptitle {
     color: #828282;
@@ -18,5 +19,68 @@
     font-weight: 400;
     line-height: normal;
     letter-spacing: 3.2px;
+  }
+  &_title {
+    color: #fff;
+    font-family: "Buyan";
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    .red {
+      color: #e03131;
+    }
+    .services_btn {
+      border-radius: 5px;
+      border: 1px solid #282828;
+      background: #fff;
+      backdrop-filter: blur(2.5px);
+      color: #0c0c0c;
+      font-family: "Manrope";
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      text-transform: uppercase;
+      padding: 11.5px 20px;
+      position: relative;
+      top: -17px;
+    }
+  }
+  &_video {
+    position: relative;
+    .play_img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+  &_text {
+    color: #afafaf;
+    font-family: "Manrope";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+    margin-top: 50px;
+    &.gray {
+      color: #828282;
+      margin-top: 10px;
+    }
+  }
+  .big_text {
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #323232;
+    font-family: "Buyan";
+    font-size: 250px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    position: absolute;
+    bottom: 0;
+    left: -20%;
+    right: auto;
+    z-index: -1;
   }
 }
