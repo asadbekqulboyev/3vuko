@@ -30,6 +30,10 @@
     gap: 10px;
     padding-right: 20px;
     border-right: 1px solid #ffffff21;
+    @media (max-width: 992px) {
+      padding-right: 0;
+      border: 0;
+    }
     &_text {
       display: flex;
       flex-direction: column;
@@ -57,16 +61,25 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    @media (max-width: 992px) {
+      display: none;
+    }
   }
   &_right {
     display: flex;
     align-items: center;
     gap: 50px;
+    @media (max-width: 1200px) {
+      gap: 26px;
+    }
     &_social {
       display: flex;
       align-items: center;
       gap: 25px;
       list-style: none;
+      @media (max-width: 1200px) {
+        gap: 15px;
+      }
       li {
         a {
           display: flex;
@@ -75,6 +88,9 @@
           padding: 15px;
           border-radius: 5px;
           border: 1px solid rgba(255, 255, 255, 0.2);
+          @media (max-width: 1200px) {
+            padding: 12px;
+          }
           svg path {
             transition: all 0.3s ease;
           }
@@ -115,6 +131,9 @@
     align-items: center;
     text-decoration: none;
     padding: 8px 24.5px;
+    @media (max-width: 1200px) {
+      padding: 8px 20px;
+    }
     span {
       color: #fff;
       font-family: "Buyan";
@@ -129,6 +148,9 @@
     display: flex;
     justify-content: space-between;
     padding-top: 15px;
+    & > img {
+      margin-top: -15px;
+    }
     & > li {
       position: relative;
       list-style: none;
@@ -145,6 +167,9 @@
         line-height: normal;
         text-decoration: none;
         transition: all 0.3s linear;
+        @media (max-width: 992px) {
+          font-size: 16px;
+        }
       }
     }
     & > li > img {
@@ -162,12 +187,15 @@
     .dropdown_submenu {
       position: absolute;
       border-radius: 0 0 0 10px;
+      border-radius: 0 0 0 10px;
       background: rgba(17, 17, 17, 0.9);
       backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(20px);
       padding: 0px 20px 0px;
       height: 0;
       overflow: hidden;
-      top: 40px;
+      top: 39px;
+      left: -20px;
       transition: all 0.3s ease;
       min-width: 530px;
       ul {
@@ -187,6 +215,11 @@
         border-bottom: 1px solid #272727;
         display: flex;
         width: 100%;
+        transition: all 0.3s ease;
+        &:hover {
+          color: #e03131;
+          border-color: #e03131;
+        }
       }
     }
     & > li:hover {
