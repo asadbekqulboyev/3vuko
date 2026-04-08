@@ -1,7 +1,8 @@
 .booking {
   background: #0c0c0c url(../images/booking_bg.png) no-repeat center;
   min-height: 100dvh;
-  position: relative;
+  position: sticky;
+  top: 0;
   z-index: 8;
   padding: 172px 0 100px;
   &_top {
@@ -234,5 +235,7 @@
   }
   &_map {
     width: calc(50% - 10px);
+    border-radius: 15px;
+    overflow: hidden;
   }
 }

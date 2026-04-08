@@ -895,7 +895,8 @@
 .booking {
   background: #0c0c0c url(../images/booking_bg.png) no-repeat center;
   min-height: 100dvh;
-  position: relative;
+  position: sticky;
+  top: 0;
   z-index: 8;
   padding: 172px 0 100px;
 }
@@ -1123,6 +1124,220 @@
 }
 .booking_map {
   width: calc(50% - 10px);
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.production {
+  padding: 100px 0;
+  position: sticky;
+  top: 0;
+  min-height: 100dvh;
+  z-index: 8;
+  border-radius: 50px 50px 0 0;
+  background: #fff;
+}
+.production .section_title {
+  display: block;
+  max-width: 1098px;
+}
+.production .section_title span {
+  color: #e03131;
+}
+.production_description {
+  width: 100%;
+  max-width: 856px;
+  color: #828282;
+  font-size: 16px;
+  line-height: normal;
+  margin-top: 20px;
+}
+.production_items {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 70px;
+}
+.production_item {
+  width: calc(33.33% - 10px);
+}
+.production_item_top {
+  width: 100%;
+  position: relative;
+}
+.production_item_top img:first-child {
+  width: 100%;
+  display: block;
+}
+.production_item_top img:last-child {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 50px;
+}
+.production_item_body {
+  margin-top: 20px;
+}
+.production_item_body p {
+  line-height: normal;
+}
+.production_item_title {
+  color: #0c0c0c;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.production_item_title.last {
+  width: calc(100% + 29px);
+}
+.production .button {
+  border-radius: 5px;
+  border: 1px solid #000;
+  color: #0a0a0a;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+  background: #fff;
+  padding: 13px 34px;
+  margin: 40px auto 0;
+  display: block;
+  width: fit-content;
+}
+
+.news {
+  position: sticky;
+  min-height: 100dvh;
+  top: 0;
+  z-index: 9;
+  border-radius: 50px 50px 0 0;
+  background: #f4f4f4;
+  padding: 100px 0;
+}
+.news_items {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px 0;
+  margin-top: 50px;
+}
+.news_item {
+  width: calc(33.33% - 10px);
+  border-radius: 10px;
+  background: #fff;
+}
+.news_item img {
+  width: 100%;
+}
+.news_item_body {
+  padding: 20px;
+}
+.news_item_date {
+  color: #828282;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.news_item_title {
+  color: #0c0c0c;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-skip-ink: auto;
+  text-decoration-thickness: auto;
+  text-underline-offset: auto;
+}
+.news .button {
+  border-radius: 5px;
+  border: 1px solid #000;
+  color: #0a0a0a;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+  background: #fff;
+  padding: 13px 34px;
+  margin: 40px auto 0;
+  display: block;
+  width: fit-content;
+}
+
+.podcast {
+  padding: 100px 0;
+  position: relative;
+  z-index: 10;
+  background: #0c0c0c;
+  min-height: 100dvh;
+}
+.podcast .section_title {
+  color: #fff;
+}
+.podcast_top {
+  display: flex;
+  justify-content: space-between;
+}
+.podcast_top p {
+  text-align: right;
+  color: #828282;
+  text-align: right;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  width: 420px;
+}
+.podcast_content {
+  margin-top: 70px;
+  display: flex;
+  justify-content: space-between;
+}
+.podcast_left {
+  width: calc(50% - 35px);
+}
+.podcast_left > img {
+  width: 100%;
+}
+.podcast_left .button {
+  cursor: pointer;
+  outline: none;
+  border-radius: 10px;
+  background: #e03131;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border: none;
+  width: 100%;
+  padding: 10px;
+  margin-top: 28px;
+}
+.podcast_right {
+  width: calc(50% - 35px);
+  color: #fff;
+  font-family: "Manrope";
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.podcast_right_title {
+  color: #fff;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 26px;
+}
+.podcast_right p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  margin-top: 10px;
 }
 
 @font-face {
