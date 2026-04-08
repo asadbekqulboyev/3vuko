@@ -4,9 +4,13 @@
   background: #f4f4f4;
   background-size: 100%;
   min-height: 100dvh;
-  position: sticky;
+  overflow-y: auto;
+  position: relative;
   top: 0;
-  z-index: 4;
+  z-index: 5;
+  &::-webkit-scrollbar {
+    display: none;
+  }
   &_top {
     display: flex;
     justify-content: space-between;

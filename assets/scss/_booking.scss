@@ -1,0 +1,238 @@
+.booking {
+  background: #0c0c0c url(../images/booking_bg.png) no-repeat center;
+  min-height: 100dvh;
+  position: relative;
+  z-index: 8;
+  padding: 172px 0 100px;
+  &_top {
+    display: flex;
+    justify-content: space-between;
+    p {
+      color: #828282;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      max-width: 420px;
+      span {
+        color: #fff;
+      }
+    }
+  }
+  .section_title {
+    color: #fff;
+  }
+  .booking_items {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 70px;
+  }
+  .booking_item {
+    width: calc(25% - 10px);
+    border-radius: 10px;
+    border: 1px solid #222;
+    background: linear-gradient(
+      134deg,
+      rgba(36, 36, 36, 0.64) 1.49%,
+      rgba(0, 0, 0, 0.08) 100%
+    );
+    backdrop-filter: blur(7.5px);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    &_title {
+      color: #e03131;
+      font-family: "Manrope";
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      text-transform: uppercase;
+    }
+    p {
+      color: #fff;
+      font-family: "Manrope";
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 22px;
+      margin-top: 10px;
+    }
+    &_bottom {
+      margin-top: 20px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      a {
+        color: #fff;
+        font-family: "Manrope";
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20px;
+        text-decoration-line: underline;
+        text-decoration-style: solid;
+        text-decoration-skip-ink: auto;
+        text-decoration-thickness: auto;
+        text-underline-offset: auto;
+        text-underline-position: from-font;
+      }
+    }
+  }
+  &_form_title {
+    color: #828282;
+    font-family: "Manrope";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 30px;
+  }
+  &_content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  &_form {
+    width: calc(50% - 10px);
+    border-radius: 15px;
+    border: 1px solid #2b2b2b;
+    background: #141414;
+    padding: 30px;
+    &_input {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      span {
+        color: #828282;
+        font-family: "Manrope";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+      &.full {
+        max-width: 100%;
+        margin-top: 20px;
+        input {
+          width: 100%;
+        }
+      }
+    }
+    input {
+      border-radius: 10px;
+      border: 1px solid #282828;
+      background: #0c0c0c;
+      color: #b2b2b2;
+      font-family: "Manrope";
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      padding: 15.5px 20px;
+      width: 310px;
+    }
+    &_first {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+    }
+  }
+  &_social {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    span {
+      color: #828282;
+      font-family: "Manrope";
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+    ul {
+      display: flex;
+      gap: 10px;
+      list-style: none;
+      a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50px;
+        height: 50px;
+        border-radius: 5px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+      }
+    }
+  }
+  .checkbox_content {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    cursor: pointer;
+    margin-top: 20px;
+    align-items: center;
+    .custom_checkbox {
+      width: 20px;
+      height: 20px;
+      border-radius: 5px;
+      border: 1px solid #828282;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex: 0 0 auto;
+      input {
+        display: none;
+      }
+      .checkmark {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        display: flex;
+        background: #e03131;
+        opacity: 0;
+        transition: all 0.2s linear;
+      }
+      input:checked + .checkmark {
+        opacity: 1;
+      }
+    }
+    p {
+      color: #fff;
+      font-family: "Manrope";
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: normal;
+      a {
+        color: #fff;
+      }
+    }
+  }
+  .button {
+    cursor: pointer;
+    outline: none;
+    border-radius: 10px;
+    background: #e03131;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border: none;
+    width: 100%;
+    padding: 10px;
+    margin-top: 50px;
+    svg {
+      transition: all 0.2s linear;
+    }
+    &:hover {
+      svg {
+        transform: rotate(45deg);
+      }
+    }
+  }
+  &_map {
+    width: calc(50% - 10px);
+  }
+}

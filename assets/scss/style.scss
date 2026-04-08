@@ -5,6 +5,7 @@
 @import "projects";
 @import "gallery";
 @import "prices";
+@import "booking";
 @font-face {
   font-family: "Buyan";
   src: url(../fonts/BuyanBold.ttf);
@@ -68,4 +69,28 @@ main {
   font-weight: 700;
   line-height: normal;
   gap: 10px;
+}
+.ellipse_button {
+  width: 150px;
+  height: 150px;
+  display: flex;
+  border-radius: 50%;
+  margin: -247px auto auto;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-direction: column;
+  color: #0c0c0c;
+  text-align: center;
+  font-family: "Manrope";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+  background: #fff;
+  text-decoration: none;
+  position: absolute;
+  left: 0;
+  right: 0;
 }

@@ -767,9 +767,13 @@
   background: #f4f4f4;
   background-size: 100%;
   min-height: 100dvh;
-  position: sticky;
+  overflow-y: auto;
+  position: relative;
   top: 0;
-  z-index: 4;
+  z-index: 5;
+}
+.prices::-webkit-scrollbar {
+  display: none;
 }
 .prices_top {
   display: flex;
@@ -888,6 +892,239 @@
   color: #fff;
 }
 
+.booking {
+  background: #0c0c0c url(../images/booking_bg.png) no-repeat center;
+  min-height: 100dvh;
+  position: relative;
+  z-index: 8;
+  padding: 172px 0 100px;
+}
+.booking_top {
+  display: flex;
+  justify-content: space-between;
+}
+.booking_top p {
+  color: #828282;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  max-width: 420px;
+}
+.booking_top p span {
+  color: #fff;
+}
+.booking .section_title {
+  color: #fff;
+}
+.booking .booking_items {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 70px;
+}
+.booking .booking_item {
+  width: calc(25% - 10px);
+  border-radius: 10px;
+  border: 1px solid #222;
+  background: linear-gradient(134deg, rgba(36, 36, 36, 0.64) 1.49%, rgba(0, 0, 0, 0.08) 100%);
+  backdrop-filter: blur(7.5px);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.booking .booking_item_title {
+  color: #e03131;
+  font-family: "Manrope";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+}
+.booking .booking_item p {
+  color: #fff;
+  font-family: "Manrope";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+  margin-top: 10px;
+}
+.booking .booking_item_bottom {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.booking .booking_item_bottom a {
+  color: #fff;
+  font-family: "Manrope";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-skip-ink: auto;
+  text-decoration-thickness: auto;
+  text-underline-offset: auto;
+  text-underline-position: from-font;
+}
+.booking_form_title {
+  color: #828282;
+  font-family: "Manrope";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-top: 30px;
+}
+.booking_content {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.booking_form {
+  width: calc(50% - 10px);
+  border-radius: 15px;
+  border: 1px solid #2b2b2b;
+  background: #141414;
+  padding: 30px;
+}
+.booking_form_input {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.booking_form_input span {
+  color: #828282;
+  font-family: "Manrope";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.booking_form_input.full {
+  max-width: 100%;
+  margin-top: 20px;
+}
+.booking_form_input.full input {
+  width: 100%;
+}
+.booking_form input {
+  border-radius: 10px;
+  border: 1px solid #282828;
+  background: #0c0c0c;
+  color: #b2b2b2;
+  font-family: "Manrope";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding: 15.5px 20px;
+  width: 310px;
+}
+.booking_form_first {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+.booking_social {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.booking_social span {
+  color: #828282;
+  font-family: "Manrope";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.booking_social ul {
+  display: flex;
+  gap: 10px;
+  list-style: none;
+}
+.booking_social ul a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.booking .checkbox_content {
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+  cursor: pointer;
+  margin-top: 20px;
+  align-items: center;
+}
+.booking .checkbox_content .custom_checkbox {
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+  border: 1px solid #828282;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 0 0 auto;
+}
+.booking .checkbox_content .custom_checkbox input {
+  display: none;
+}
+.booking .checkbox_content .custom_checkbox .checkmark {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: flex;
+  background: #e03131;
+  opacity: 0;
+  transition: all 0.2s linear;
+}
+.booking .checkbox_content .custom_checkbox input:checked + .checkmark {
+  opacity: 1;
+}
+.booking .checkbox_content p {
+  color: #fff;
+  font-family: "Manrope";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+.booking .checkbox_content p a {
+  color: #fff;
+}
+.booking .button {
+  cursor: pointer;
+  outline: none;
+  border-radius: 10px;
+  background: #e03131;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border: none;
+  width: 100%;
+  padding: 10px;
+  margin-top: 50px;
+}
+.booking .button svg {
+  transition: all 0.2s linear;
+}
+.booking .button:hover svg {
+  transform: rotate(45deg);
+}
+.booking_map {
+  width: calc(50% - 10px);
+}
+
 @font-face {
   font-family: "Buyan";
   src: url(../fonts/BuyanBold.ttf);
@@ -945,4 +1182,29 @@ main {
   font-weight: 700;
   line-height: normal;
   gap: 10px;
+}
+
+.ellipse_button {
+  width: 150px;
+  height: 150px;
+  display: flex;
+  border-radius: 50%;
+  margin: -247px auto auto;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-direction: column;
+  color: #0c0c0c;
+  text-align: center;
+  font-family: "Manrope";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+  background: #fff;
+  text-decoration: none;
+  position: absolute;
+  left: 0;
+  right: 0;
 }/*# sourceMappingURL=style.css.map */
