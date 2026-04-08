@@ -225,4 +225,59 @@ function render_music_list() {
   });
 }
 
+function setup_gallery_marquee() {
+  const gallery_rows = document.querySelectorAll(".gallery .gallery_items");
+
+  gallery_rows.forEach((row) => {
+    row.classList.remove("is-ready");
+    row
+      .querySelectorAll('[data-gallery-clone="true"]')
+      .forEach((clone) => clone.remove());
+
+    const original_items = Array.from(row.children);
+    if (!original_items.length) return;
+
+    const row_styles = window.getComputedStyle(row);
+    const row_gap = parseFloat(row_styles.columnGap || row_styles.gap || "0");
+    const original_width = row.scrollWidth;
+    const container_width =
+      row.parentElement?.clientWidth ||
+      row.closest(".gallery")?.clientWidth ||
+      window.innerWidth;
+
+    let total_width = original_width;
+
+    while (total_width < original_width + container_width) {
+      original_items.forEach((item) => {
+        const clone = item.cloneNode(true);
+        clone.setAttribute("data-gallery-clone", "true");
+        clone.setAttribute("aria-hidden", "true");
+        row.appendChild(clone);
+      });
+
+      total_width = row.scrollWidth;
+    }
+
+    const travel_distance = original_width + row_gap;
+    const duration = Math.max(travel_distance / 80, 18);
+
+    row.style.setProperty("--gallery-distance", `${travel_distance}px`);
+    row.style.setProperty("--gallery-duration", `${duration}s`);
+    row.classList.add("is-ready");
+  });
+}
+
+let gallery_resize_frame = null;
+
+window.addEventListener("resize", () => {
+  if (gallery_resize_frame) {
+    window.cancelAnimationFrame(gallery_resize_frame);
+  }
+
+  gallery_resize_frame = window.requestAnimationFrame(() => {
+    setup_gallery_marquee();
+  });
+});
+
 render_music_list();
+setup_gallery_marquee();

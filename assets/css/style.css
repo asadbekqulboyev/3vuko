@@ -77,6 +77,11 @@
     gap: 26px;
   }
 }
+@media (max-width: 992px) {
+  .header_right {
+    gap: 16px;
+  }
+}
 .header_right_social {
   display: flex;
   align-items: center;
@@ -119,6 +124,11 @@
   font-weight: 700;
   line-height: normal;
   text-decoration: none;
+}
+@media (max-width: 992px) {
+  .header_contact a {
+    font-size: 24px;
+  }
 }
 .header_contact span {
   color: #828282;
@@ -695,19 +705,196 @@
   border-radius: 50px 50px 0 0;
   background: #fff;
   min-height: 100dvh;
+  position: sticky;
+  top: 0;
+  z-index: 3;
+  padding: 100px 0;
+  overflow: hidden;
+}
+.gallery_top {
+  display: flex;
+  justify-content: space-between;
+}
+.gallery_top p {
+  max-width: 420px;
+}
+.gallery_items {
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+  width: max-content;
+  margin-top: 70px;
+  will-change: transform;
+}
+.gallery .gallery_items.first.is-ready {
+  animation: left_animate var(--gallery-duration, 28s) linear infinite;
+}
+.gallery .gallery_items:last-of-type {
+  margin-top: 20px;
+}
+.gallery .gallery_items:last-of-type.is-ready {
+  animation: right_animate var(--gallery-duration, 28s) linear infinite;
+}
+.gallery_item {
+  width: 420px;
+  line-height: 0;
+  flex: 0 0 auto;
+}
+.gallery_item img {
+  width: 100%;
+  line-height: 0;
 }
 
+@keyframes left_animate {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(calc(-1 * var(--gallery-distance, 0px)), 0, 0);
+  }
+}
+@keyframes right_animate {
+  from {
+    transform: translate3d(calc(-1 * var(--gallery-distance, 0px)), 0, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
 .prices {
   padding: 96px 0;
   border-radius: 50px 50px 0 0;
   background: #f4f4f4;
   background-size: 100%;
   min-height: 100dvh;
+  position: sticky;
+  top: 0;
+  z-index: 4;
+}
+.prices_top {
+  display: flex;
+  justify-content: space-between;
+}
+.prices_top p {
+  color: #292d32;
+  font-family: "Manrope";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px;
+  max-width: 530px;
+}
+.prices_items {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 68px;
+}
+.prices_item {
+  width: calc(33.33% - 19px);
+  border-radius: 32px;
+  border: 1px solid #ededed;
+  background: #fff;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.08);
+  padding: 40px;
+  position: relative;
+}
+.prices_item:first-child p {
+  width: calc(100% + 22px);
+  letter-spacing: -0.4px;
+}
+.prices_item .top_badge {
+  border-radius: 10px 0 0 10px;
+  background: #ffcf29;
+  padding: 5px 12px 4px;
+  color: #fff;
+  font-family: "Manrope";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px;
+  position: absolute;
+  top: 45px;
+  right: 0;
+}
+.prices_item_title {
+  color: #0c0c0c;
+  font-family: "Buyan-regular";
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px;
+  margin-top: 24px;
+}
+.prices_item p {
+  color: #828282;
+  margin-top: 4px;
+  font-family: "Manrope";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0%;
+}
+.prices_item_sum {
+  color: #0c0c0c;
+  font-family: "Manrope";
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 56px;
+  margin-top: 32px;
+}
+.prices_item_body {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 30px;
+  padding-top: 30px;
+  border-top: 1px solid #ededed;
+}
+.prices_item_body ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  gap: 16px;
+}
+.prices_item_body ul li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.prices_btn {
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.32) inset;
+  color: #0c0c0c;
+  font-family: "Buyan";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  margin-top: 32px;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  line-height: 20px;
+  padding: 12px 14px;
+}
+.prices_btn.red {
+  border-radius: 5px;
+  background: #e03131;
+  box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0.32) inset;
+  color: #fff;
 }
 
 @font-face {
   font-family: "Buyan";
   src: url(../fonts/BuyanBold.ttf);
+}
+@font-face {
+  font-family: "Buyan-regular";
+  src: url(../fonts/BuyanRegular.ttf);
 }
 * {
   margin: 0;
@@ -728,7 +915,7 @@ body {
   width: 100%;
   max-width: 1300px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 15px;
 }
 
 .button {

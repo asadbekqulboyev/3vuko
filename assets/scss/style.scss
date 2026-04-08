@@ -9,6 +9,11 @@
   font-family: "Buyan";
   src: url(../fonts/BuyanBold.ttf);
 }
+@font-face {
+  font-family: "Buyan-regular";
+  src: url(../fonts/BuyanRegular.ttf);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -29,7 +34,7 @@ body {
   width: 100%;
   max-width: 1300px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 15px;
 }
 .button {
   border-radius: 5px;

@@ -72,6 +72,9 @@
     @media (max-width: 1200px) {
       gap: 26px;
     }
+    @media (max-width: 992px) {
+      gap: 16px;
+    }
     &_social {
       display: flex;
       align-items: center;
@@ -114,6 +117,9 @@
       font-weight: 700;
       line-height: normal;
       text-decoration: none;
+      @media (max-width: 992px) {
+        font-size: 24px;
+      }
     }
     span {
       color: #828282;
