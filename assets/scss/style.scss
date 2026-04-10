@@ -3,21 +3,40 @@
 @import "_hero";
 @import "services";
 @import "projects";
+@import "studio";
 @import "gallery";
 @import "prices";
 @import "booking";
 @import "production";
 @import "news";
 @import "podcast";
+@import "testimonials";
+@import "faq";
+@import "footer";
+@font-face {
+  font-family: "Buyan";
+  src: url(../fonts/BuyanRegular.ttf);
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
 @font-face {
   font-family: "Buyan";
   src: url(../fonts/BuyanBold.ttf);
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
 }
 @font-face {
   font-family: "Buyan-regular";
   src: url(../fonts/BuyanRegular.ttf);
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
 }
-
+:root {
+  --header-h: 132px;
+}
 * {
   margin: 0;
   padding: 0;
@@ -30,6 +49,8 @@ body {
   line-height: 22px;
   letter-spacing: 0%;
   background: #0c0c0c;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
 }
 // .wrapper {
 //   overflow: hidden;
@@ -96,4 +117,9 @@ main {
   position: absolute;
   left: 0;
   right: 0;
+}
+
+.screen {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
 }

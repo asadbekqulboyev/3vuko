@@ -2,5 +2,381 @@
   padding: 100px 0;
   border-radius: 50px 50px 0 0;
   background: #fff;
-  
+  --testimonial-gap: 24px;
+  position: relative;
+  z-index: 12;
+  &_top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 70px;
+  }
+
+  .section_title {
+    flex-wrap: wrap;
+  }
+
+  .section_title p {
+    color: #0c0c0c;
+  }
+
+  .section_title span {
+    color: #e03131;
+  }
+
+  &_control {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  &_btn {
+    width: 54px;
+    height: 54px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 1px solid #d8d8d8;
+    background: #fff;
+    color: #1c274c;
+    cursor: pointer;
+    transition:
+      background 0.25s ease,
+      border-color 0.25s ease,
+      color 0.25s ease,
+      transform 0.25s ease,
+      opacity 0.25s ease;
+  }
+
+  &_btn:hover:not(.is-disabled):not(:disabled) {
+    transform: translateY(-2px);
+  }
+
+  &_btn.next {
+    border-radius: 40px;
+    background: #e03131;
+    color: #fff;
+  }
+
+  &_btn.is-disabled,
+  &_btn:disabled {
+    opacity: 0.45;
+    cursor: default;
+    transform: none;
+  }
+
+  &_btn svg path {
+    fill: currentColor;
+  }
+
+  &_viewport {
+    overflow-x: auto;
+    padding: 4px;
+    margin: -4px;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  &_viewport::-webkit-scrollbar {
+    display: none;
+  }
+
+  &_track {
+    display: flex;
+    align-items: stretch;
+  }
+
+  &_slider {
+    overflow: hidden;
+  }
+
+  &_slider .swiper-wrapper {
+    align-items: stretch;
+  }
+
+  &_card {
+    min-width: 0;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    border-radius: 18px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    background: #fff;
+    scroll-snap-align: start;
+    // padding-bottom:;
+    min-height: fit-content;
+  }
+
+  &_card_head {
+    display: flex;
+    align-items: center;
+    gap: 27px;
+    margin-bottom: 17px;
+  }
+
+  &_avatar {
+    width: 50px;
+    height: 50px;
+    flex: 0 0 50px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: #fff;
+    font-weight: 800;
+    font-size: 16px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  &_person {
+    min-width: 0;
+  }
+
+  &_name {
+    color: #000;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+
+  &_meta {
+    color: #828282;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  &_rating {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 18px;
+    flex-wrap: wrap;
+  }
+
+  &_stars {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  &_stars svg {
+    width: 14px;
+    height: 14px;
+    flex: 0 0 14px;
+  }
+
+  &_date {
+    color: #5f6470;
+    font-size: 13px;
+    line-height: 1.2;
+  }
+
+  &_text {
+    color: #828282;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px; /* 157.143% */
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
+    margin-bottom: 31px;
+  }
+
+  &_card.is-expanded &_text {
+    display: block;
+    overflow: visible;
+    -webkit-line-clamp: unset;
+  }
+
+  &_more {
+    color: #0c0c0c;
+    font-family: "Buyan-regular";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition:
+      border-color 0.25s ease,
+      color 0.25s ease,
+      transform 0.25s ease;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.32) inset;
+    padding: 12px 14px;
+    background: #fff;
+    margin-top: auto;
+  }
+
+  &_more:hover {
+    color: #c21c1c;
+    border-color: #c21c1c;
+    transform: translateY(-1px);
+  }
+
+  &_progress {
+    width: 100%;
+    height: 2px;
+    margin: 100px auto 0;
+    background: #ece7e1;
+    position: relative;
+    overflow: hidden;
+  }
+
+  &_progress_current {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: #e03131;
+    transition:
+      width 0.3s ease,
+      transform 0.3s ease;
+  }
+
+  &_modal {
+    position: fixed;
+    inset: 0;
+    z-index: 30;
+    display: grid;
+    place-items: center;
+    padding: 20px;
+  }
+
+  &_modal[hidden] {
+    display: none;
+  }
+
+  &_modal_backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(12, 12, 12, 0.58);
+    backdrop-filter: blur(10px);
+  }
+
+  &_modal_dialog {
+    position: relative;
+    z-index: 1;
+    width: min(720px, 100%);
+    max-height: calc(100vh - 40px);
+    overflow: auto;
+    padding: 32px;
+    border-radius: 24px;
+    background: #fff;
+    box-shadow: 0 30px 80px rgba(12, 12, 12, 0.22);
+  }
+
+  &_modal_close {
+    width: 44px;
+    height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 1px solid #e6dfd8;
+    background: #fff;
+    color: #0c0c0c;
+    cursor: pointer;
+    position: sticky;
+    top: 0;
+    margin-left: auto;
+  }
+
+  &_modal_card {
+    padding-top: 16px;
+  }
+
+  &_modal_text {
+    color: #303642;
+    font-size: 16px;
+    line-height: 1.8;
+  }
+}
+
+body.is-locked {
+  overflow: hidden;
+}
+
+@media (max-width: 899px) {
+  .testimonials {
+    padding: 80px 0;
+    --testimonial-gap: 20px;
+
+    &_top {
+      flex-direction: column;
+      align-items: flex-start;
+      margin-bottom: 32px;
+    }
+
+    &_control {
+      gap: 12px;
+    }
+
+    &_btn {
+      width: 48px;
+      height: 48px;
+    }
+
+    &_card {
+      min-height: 290px;
+      padding: 22px;
+    }
+  }
+}
+
+@media (max-width: 639px) {
+  .testimonials {
+    padding: 64px 0;
+    border-radius: 32px 32px 0 0;
+    --testimonial-gap: 16px;
+
+    .section_title {
+      font-size: 42px;
+      gap: 8px;
+    }
+
+    &_card {
+      min-height: auto;
+      padding: 20px;
+    }
+
+    &_name {
+      font-size: 17px;
+    }
+
+    &_text {
+      -webkit-line-clamp: 6;
+    }
+
+    &_more {
+      font-size: 22px;
+    }
+
+    &_modal {
+      padding: 12px;
+    }
+
+    &_modal_dialog {
+      padding: 24px 18px;
+      border-radius: 20px;
+    }
+
+    &_modal_text {
+      font-size: 15px;
+    }
+  }
 }

@@ -1,10 +1,84 @@
 .booking {
   background: #0c0c0c url(../images/booking_bg.png) no-repeat center;
-  min-height: 100dvh;
-  position: sticky;
-  top: 0;
+  min-height: calc(100vh - var(--header-h));
+  position: relative;
   z-index: 8;
+  top: 0;
   padding: 172px 0 100px;
+  &.last {
+    z-index: 22;
+    background: #0c0c0c;
+    min-height: auto;
+    padding: 100px 0;
+    .section_title {
+      display: block;
+      span {
+        color: #e03131;
+      }
+    }
+    p {
+      max-width: 530px;
+    }
+    .booking_form_title {
+      width: 100%;
+      margin-top: 0;
+    }
+    .booking_content {
+      flex-direction: column;
+      gap: 20px;
+      margin-top: 0;
+      .booking_form {
+        width: 100%;
+      }
+    }
+    .booking_socials {
+      display: flex;
+      width: calc(50% - 10px);
+      flex-direction: column;
+      gap: 20px;
+      .booking_social_items {
+        display: flex;
+        gap: 20px;
+        height: 100%;
+      }
+      a {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-end;
+        text-decoration: none;
+        padding: 20px;
+        border-radius: 10px;
+        border: 1px solid #282828;
+        background: #141414;
+        flex: 1;
+        &:nth-child(2) {
+          background: #21a2e3;
+        }
+        &:last-child {
+          background: #5009d8;
+          span {
+            padding-right: 30px;
+          }
+        }
+        span {
+          display: block;
+          width: 100%;
+          color: #fff;
+          font-family: "Manrope";
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: normal;
+        }
+      }
+    }
+  }
+  &_component {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+  }
   &_top {
     display: flex;
     justify-content: space-between;

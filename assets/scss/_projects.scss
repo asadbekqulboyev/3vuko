@@ -3,10 +3,9 @@
   border-radius: 50px 50px 0 0;
   background: #f4f4f4 url("../images/project_bg.png") no-repeat bottom center;
   background-size: 100%;
-  min-height: 100dvh;
-  position: sticky;
-  top: 0;
+  position: relative;
   z-index: 3;
+  min-height: 100dvh;
 
   &_top {
     display: flex;

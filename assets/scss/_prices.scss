@@ -3,7 +3,8 @@
   border-radius: 50px 50px 0 0;
   background: #f4f4f4;
   background-size: 100%;
-  min-height: 100dvh;
+  top: var(--header-h);
+  min-height: calc(100vh - var(--header-h));
   overflow-y: auto;
   position: relative;
   top: 0;

@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ЗВУКОЗАПИСЬ.МОСКВА МЫ ДЕЛАЕМ ЗВУК!</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
@@ -176,7 +178,7 @@
             </div>
         </header>
         <main>
-            <section class="hero">
+            <section class="hero screen">
                 <div class="container">
                     <div class="hero_content">
                         <p class="hero_toptitle"><img src="assets/images/hero_icon.svg" alt=""> <span>В Москве и в
@@ -220,7 +222,7 @@
                     </div>
                 </div>
             </section>
-            <section class="services">
+            <section class="services screen">
                 <div class="container">
                     <div class="services_content">
                         <div class="services_content_left">
@@ -231,7 +233,7 @@
                                 и мастеринга <span class="services_btn">На рынке с 2009 года</span>
                             </div>
                         </div>
-                        <a href="#" class="services_video">
+                        <a data-fancybox href="https://www.youtube.com/watch?v=F3RPRHVzAyg" class="services_video">
                             <img src="assets/images/video_banner.png" alt="" class="video_img">
                             <img src="./assets/images/play_icon.svg" class="play_img">
                         </a>
@@ -255,7 +257,7 @@
                     <div class="big_text">ЗВУКОЗАПИСЬ.МОСКВА</div>
                 </div>
             </section>
-            <section class="projects">
+            <section class="projects screen">
                 <div class="container">
                     <div class="projects_top">
                         <h2 class="section_title">
@@ -285,7 +287,109 @@
                     </div>
                 </div>
             </section>
-            <section class="gallery">
+            <section class="studio screen">
+                <div class="container">
+                    <div class="studio_top">
+                        <h2 class="section_title">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none">
+                                <path
+                                    d="M8.75 12C8.75 10.2051 10.2051 8.75 12 8.75C13.7949 8.75 15.25 10.2051 15.25 12C15.25 13.7949 13.7949 15.25 12 15.25C10.2051 15.25 8.75 13.7949 8.75 12Z"
+                                    fill="#E03131" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22ZM12 7.25C9.37665 7.25 7.25 9.37665 7.25 12C7.25 14.6234 9.37665 16.75 12 16.75C14.6234 16.75 16.75 14.6234 16.75 12C16.75 9.37665 14.6234 7.25 12 7.25Z"
+                                    fill="#E03131" />
+                            </svg>
+                            <span>Услуги СТУДИЙ ЗВУКОЗАПИСИ</span>
+                        </h2>
+                        <div class="studio_description">
+                            Оборудование студий звукозаписи и акустические параметры помещений в которых проводится
+                            запись соответствуют самым высоким требованиям и уровню качества материалов
+                        </div>
+                    </div>
+                    <div class="studio_showcase" data-studio>
+                        <div class="studio_card">
+                            <p class="studio_card_text" data-studio-description>
+                                Пишем аранжировки на заказ в любых стилях более 10 лет. Залогом сильной коммерческой
+                                композиции остается профессиональная аранжировка.
+                            </p>
+                        </div>
+
+                        <div class="studio_center">
+                            <ul class="studio_list" aria-label="Услуги студий звукозаписи">
+                                <li class="studio_item">
+                                    <button class="studio_trigger" type="button" data-studio-trigger data-index="01"
+                                        data-image="assets/images/production1.png"
+                                        data-alt="Запись вокала и инструментов"
+                                        data-description="Записываем вокал, гитары, клавишные и живые инструменты в подготовленных помещениях с точной коммутацией и комфортным мониторингом.">
+                                        Запись вокала и инструментов
+                                    </button>
+                                </li>
+                                <li class="studio_item">
+                                    <button class="studio_trigger" type="button" data-studio-trigger data-index="02"
+                                        data-image="assets/images/production2.png" data-alt="Сведение и мастеринг"
+                                        data-description="Выравниваем баланс, динамику и частоты, чтобы трек уверенно звучал на стримингах, в наушниках, в машине и на концертной акустике.">
+                                        Сведение и мастеринг
+                                    </button>
+                                </li>
+                                <li class="studio_item is-active">
+                                    <button class="studio_trigger" type="button" data-studio-trigger data-index="03"
+                                        data-image="assets/images/music_image.png" data-alt="Аранжировка песни"
+                                        data-description="Пишем аранжировки на заказ в любых стилях более 10 лет. Залогом сильной коммерческой композиции остается профессиональная аранжировка.">
+                                        Аранжировка песни
+                                    </button>
+                                </li>
+                                <li class="studio_item">
+                                    <button class="studio_trigger" type="button" data-studio-trigger data-index="04"
+                                        data-image="assets/images/gallery6.png" data-alt="Подарочный сертификат"
+                                        data-description="Подарочный сертификат на запись, сведение или полноценную работу над песней. Удобный формат для артистов любого уровня.">
+                                        Подарочный сертификат
+                                    </button>
+                                </li>
+                                <li class="studio_item">
+                                    <button class="studio_trigger" type="button" data-studio-trigger data-index="05"
+                                        data-image="assets/images/video_banner.png" data-alt="Съемка видеоклипов"
+                                        data-description="Организуем съемку live-видео, клипов и студийных роликов с продуманным сценарием, светом и дальнейшей постобработкой.">
+                                        Съемка видеоклипов
+                                    </button>
+                                </li>
+                                <li class="studio_item">
+                                    <button class="studio_trigger" type="button" data-studio-trigger data-index="06"
+                                        data-image="assets/images/production3.png"
+                                        data-alt="Выездная студия звукозаписи"
+                                        data-description="Привозим мобильный комплект оборудования на площадку, чтобы записать концерт, репетицию, подкаст или живой сет вне студии.">
+                                        Выездная студия звукозаписи
+                                    </button>
+                                </li>
+                                <li class="studio_item">
+                                    <button class="studio_trigger" type="button" data-studio-trigger data-index="07"
+                                        data-image="assets/images/podcast_img.png" data-alt="Песня под ключ"
+                                        data-description="Берем проект целиком: от идеи и текста до аранжировки, записи, сведения, мастеринга и выпуска готового материала.">
+                                        Песня под &quot;ключ&quot;
+                                    </button>
+                                </li>
+                            </ul>
+
+                            <a href="#" class="studio_cta" aria-label="Все услуги студий">
+                                <span class="studio_cta_icon" aria-hidden="true">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15"
+                                        fill="none">
+                                        <path d="M4 11L11 4M6 4H11V9" stroke="white" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </span>
+                                <span>Все услуги студий</span>
+                            </a>
+                        </div>
+
+                        <figure class="studio_media">
+                            <img src="assets/images/music_image.png" alt="Аранжировка песни" data-studio-image
+                                loading="lazy">
+                        </figure>
+                    </div>
+                </div>
+            </section>
+            <section class="gallery screen">
                 <div class="container">
                     <div class="gallery_top">
                         <h2 class="section_title">
@@ -306,21 +410,31 @@
                     </div>
                 </div>
                 <div class="gallery_items first">
-                    <div class="gallery_item"><img src="./assets/images/gallery1.png" alt=""></div>
-                    <div class="gallery_item"><img src="./assets/images/gallery2.png" alt=""></div>
-                    <div class="gallery_item"><img src="./assets/images/gallery3.png" alt=""></div>
-                    <div class="gallery_item"><img src="./assets/images/gallery4.png" alt=""></div>
-                    <div class="gallery_item"><img src="./assets/images/gallery5.png" alt=""></div>
+                    <a data-fancybox="gallery" href="./assets/images/gallery1.png" class="gallery_item"><img
+                            src="./assets/images/gallery1.png" alt=""></a>
+                    <a data-fancybox="gallery" href="./assets/images/gallery2.png" class="gallery_item"><img
+                            src="./assets/images/gallery2.png" alt=""></a>
+                    <a data-fancybox="gallery" href="./assets/images/gallery3.png" class="gallery_item"><img
+                            src="./assets/images/gallery3.png" alt=""></a>
+                    <a data-fancybox="gallery" href="./assets/images/gallery4.png" class="gallery_item"><img
+                            src="./assets/images/gallery4.png" alt=""></a>
+                    <a data-fancybox="gallery" href="./assets/images/gallery5.png" class="gallery_item"><img
+                            src="./assets/images/gallery5.png" alt=""></a>
                 </div>
                 <div class="gallery_items">
-                    <div class="gallery_item"><img src="./assets/images/gallery6.png" alt=""></div>
-                    <div class="gallery_item"><img src="./assets/images/gallery7.png" alt=""></div>
-                    <div class="gallery_item"><img src="./assets/images/gallery4.png" alt=""></div>
-                    <div class="gallery_item"><img src="./assets/images/gallery8.png" alt=""></div>
-                    <div class="gallery_item"><img src="./assets/images/gallery9.png" alt=""></div>
+                    <a data-fancybox="gallery" href="./assets/images/gallery6.png" class="gallery_item"><img
+                            src="./assets/images/gallery6.png" alt=""></a>
+                    <a data-fancybox="gallery" href="./assets/images/gallery7.png" class="gallery_item"><img
+                            src="./assets/images/gallery7.png" alt=""></a>
+                    <a data-fancybox="gallery" href="./assets/images/gallery4.png" class="gallery_item"><img
+                            src="./assets/images/gallery4.png" alt=""></a>
+                    <a data-fancybox="gallery" href="./assets/images/gallery8.png" class="gallery_item"><img
+                            src="./assets/images/gallery8.png" alt=""></a>
+                    <a data-fancybox="gallery" href="./assets/images/gallery9.png
+                    " class="gallery_item"><img src="./assets/images/gallery9.png" alt=""></a>
                 </div>
             </section>
-            <section class="prices">
+            <section class="prices screen">
                 <div class="container">
                     <div class="prices_top">
                         <h2 class="section_title">
@@ -425,7 +539,7 @@
                     </div>
                 </div>
             </section>
-            <section class="booking">
+            <section class="booking screen">
                 <a href="#" class="ellipse_button"><img src="assets/images/elipce_icon.svg" alt="">
                     <span>УСЛУГИ <br>
                         И ЦЕНЫ</span>
@@ -592,7 +706,7 @@
                     </div>
                 </div>
             </section>
-            <section class="production">
+            <section class="production screen">
                 <div class="container">
                     <h2 class="section_title">Запись песни и съемка видеоклипа у нас  студии — полный цикл создания
                         <span>музыкального контента под ключ</span>
@@ -603,7 +717,8 @@
                         и получите готовый клип под ключ — ярко, стильно и с идеальным звучанием!</p>
                     <div class="production_items">
                         <div class="production_item">
-                            <a href="#" class="production_item_top">
+                            <a data-fancybox href="https://www.youtube.com/watch?v=F3RPRHVzAyg"
+                                class="production_item_top">
                                 <img src="assets/images/production1.png" alt="">
                                 <img src="assets/images/play_icon.svg" alt="">
                             </a>
@@ -613,7 +728,8 @@
                             </div>
                         </div>
                         <div class="production_item">
-                            <a href="#" class="production_item_top">
+                            <a data-fancybox href="https://www.youtube.com/watch?v=F3RPRHVzAyg"
+                                class="production_item_top">
                                 <img src="assets/images/production2.png" alt="">
                                 <img src="assets/images/play_icon.svg" alt="">
                             </a>
@@ -623,7 +739,7 @@
                             </div>
                         </div>
                         <div class="production_item">
-                            <a href="#" class="production_item_top">
+                            <a data-fancybox href="https://www.youtube.com/watch?v=F3RPRHVzAyg"  class="production_item_top">
                                 <img src="assets/images/production2.png" alt="">
                                 <img src="assets/images/play_icon.svg" alt="">
                             </a>
@@ -636,7 +752,7 @@
                     <a href="#" class="button nobg">Смотреть больше</a>
                 </div>
             </section>
-            <section class="news">
+            <section class="news screen">
                 <div class="container">
                     <h2 class="section_title">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -730,7 +846,7 @@
 
                 </div>
             </section>
-            <section class="podcast">
+            <section class="podcast screen">
                 <div class="container">
                     <div class="podcast_top">
                         <h2 class="section_title">
@@ -787,7 +903,7 @@
                     </div>
                 </div>
             </section>
-            <section class="testimonials">
+            <section class="testimonials screen">
                 <div class="container">
                     <div class="testimonials_top">
                         <h2 class="section_title">
@@ -803,17 +919,691 @@
                             <span>ОТЗЫВЫ НАШИХ КЛИЕНТОВ</span>
                         </h2>
                         <div class="testimonials_control">
-                            <div class="testimonials_btn next">
-                                
-                            </div>
-                            <div class="testimonials_btn prev"></div>
+                            <button class="testimonials_btn prev" type="button" aria-label="Предыдущий отзыв">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="21" height="22" viewBox="0 0 21 22"
+                                    fill="none">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M9.21404 5.01386C9.47032 5.28235 9.47032 5.71765 9.21404 5.98614L5.08433 10.3125H17.5C17.8624 10.3125 18.1562 10.6203 18.1562 11C18.1562 11.3797 17.8624 11.6875 17.5 11.6875H5.08433L9.21404 16.0139C9.47032 16.2823 9.47032 16.7177 9.21404 16.9861C8.95776 17.2546 8.54224 17.2546 8.28596 16.9861L3.03596 11.4861C2.77968 11.2177 2.77968 10.7823 3.03596 10.5139L8.28596 5.01386C8.54224 4.74538 8.95776 4.74538 9.21404 5.01386Z"
+                                        fill="#1C274C" />
+                                </svg>
+                            </button>
+                            <button class="testimonials_btn next" type="button" aria-label="Следующий отзыв"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="21" height="22" viewBox="0 0 21 22"
+                                    fill="none">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M11.786 5.01386C12.0422 4.74538 12.4578 4.74538 12.714 5.01386L17.964 10.5139C18.2203 10.7823 18.2203 11.2177 17.964 11.4861L12.714 16.9861C12.4578 17.2546 12.0422 17.2546 11.786 16.9861C11.5297 16.7177 11.5297 16.2823 11.786 16.0139L15.9157 11.6875H3.5C3.13756 11.6875 2.84375 11.3797 2.84375 11C2.84375 10.6203 3.13756 10.3125 3.5 10.3125H15.9157L11.786 5.98614C11.5297 5.71765 11.5297 5.28235 11.786 5.01386Z"
+                                        fill="white" />
+                                </svg></button>
                         </div>
                     </div>
-                    .testimonials
+                </div>
+                <div class="testimonials_slide testimonials_slider swiper" id="testimonialsSlider">
+                    <div class="swiper-wrapper testimonials_track" id="testimonialsTrack">
+                        <div class="swiper-slide testimonials_card">
+                            <div class="testimonials_card_head">
+                                <div class="testimonials_avatar"><img src="assets/images/profile1.png" alt=""></div>
+                                <div class="testimonials_person">
+                                    <h3 class="testimonials_name">Вячеслав Мельников</h3>
+                                    <p class="testimonials_meta">Москва</p>
+                                </div>
+                            </div>
+                            <div class="testimonials_rating">
+                                <div class="testimonials_stars">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 19" fill="none"
+                                        aria-hidden="true">
+                                        <path
+                                            d="M9.99984 0.833252L12.781 6.46847L18.9998 7.37725L14.4998 11.7648L15.5623 17.9583L9.99984 15.0333L4.43734 17.9583L5.49984 11.7648L0.999837 7.37725L7.21859 6.46847L9.99984 0.833252Z"
+                                            fill="#F4BE18" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 19" fill="none"
+                                        aria-hidden="true">
+                                        <path
+                                            d="M9.99984 0.833252L12.781 6.46847L18.9998 7.37725L14.4998 11.7648L15.5623 17.9583L9.99984 15.0333L4.43734 17.9583L5.49984 11.7648L0.999837 7.37725L7.21859 6.46847L9.99984 0.833252Z"
+                                            fill="#F4BE18" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 19" fill="none"
+                                        aria-hidden="true">
+                                        <path
+                                            d="M9.99984 0.833252L12.781 6.46847L18.9998 7.37725L14.4998 11.7648L15.5623 17.9583L9.99984 15.0333L4.43734 17.9583L5.49984 11.7648L0.999837 7.37725L7.21859 6.46847L9.99984 0.833252Z"
+                                            fill="#F4BE18" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 19" fill="none"
+                                        aria-hidden="true">
+                                        <path
+                                            d="M9.99984 0.833252L12.781 6.46847L18.9998 7.37725L14.4998 11.7648L15.5623 17.9583L9.99984 15.0333L4.43734 17.9583L5.49984 11.7648L0.999837 7.37725L7.21859 6.46847L9.99984 0.833252Z"
+                                            fill="#F4BE18" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 19" fill="none"
+                                        aria-hidden="true">
+                                        <path
+                                            d="M9.99984 0.833252L12.781 6.46847L18.9998 7.37725L14.4998 11.7648L15.5623 17.9583L9.99984 15.0333L4.43734 17.9583L5.49984 11.7648L0.999837 7.37725L7.21859 6.46847L9.99984 0.833252Z"
+                                            fill="#F4BE18" />
+                                    </svg>
+                                </div>
+                                <div class="testimonials_date">13 июля 2025</div>
+                            </div>
+                            <p class="testimonials_text">Очень часто приходится работать с разными студиями звукозаписи,
+                                и вроде во всех все как-то обыденно. Но мне хотелось бы порекомендовать студию
+                                звукозаписи «Звукозапись.Москва». Очень здорово, что есть выбор локаций по всей Москве и
+                                можно записываться там, где действительно удобно.</p>
+                            <button class="testimonials_more" type="button">Читать полностью</button>
+                        </div>
+                        <div class="swiper-slide testimonials_card">
+                            <div class="testimonials_card_head">
+                                <div class="testimonials_avatar"><img src="assets/images/profile2.png" alt=""></div>
+                                <div class="testimonials_person">
+                                    <h3 class="testimonials_name">Алексей Самойлов</h3>
+                                    <p class="testimonials_meta">Запись в студии</p>
+                                </div>
+                            </div>
+                            <div class="testimonials_rating">
+                                <div class="testimonials_stars">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 19" fill="none"
+                                        aria-hidden="true">
+                                        <path
+                                            d="M9.99984 0.833252L12.781 6.46847L18.9998 7.37725L14.4998 11.7648L15.5623 17.9583L9.99984 15.0333L4.43734 17.9583L5.49984 11.7648L0.999837 7.37725L7.21859 6.46847L9.99984 0.833252Z"
+                                            fill="#F4BE18" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 19" fill="none"
+                                        aria-hidden="true">
+                                        <path
+                                            d="M9.99984 0.833252L12.781 6.46847L18.9998 7.37725L14.4998 11.7648L15.5623 17.9583L9.99984 15.0333L4.43734 17.9583L5.49984 11.7648L0.999837 7.37725L7.21859 6.46847L9.99984 0.833252Z"
+                                            fill="#F4BE18" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 19" fill="none"
+                                        aria-hidden="true">
+                                        <path
+                                            d="M9.99984 0.833252L12.781 6.46847L18.9998 7.37725L14.4998 11.7648L15.5623 17.9583L9.99984 15.0333L4.43734 17.9583L5.49984 11.7648L0.999837 7.37725L7.21859 6.46847L9.99984 0.833252Z"
+                                            fill="#F4BE18" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 19" fill="none"
+                                        aria-hidden="true">
+                                        <path
+                                            d="M9.99984 0.833252L12.781 6.46847L18.9998 7.37725L14.4998 11.7648L15.5623 17.9583L9.99984 15.0333L4.43734 17.9583L5.49984 11.7648L0.999837 7.37725L7.21859 6.46847L9.99984 0.833252Z"
+                                            fill="#F4BE18" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 19" fill="none"
+                                        aria-hidden="true">
+                                        <path
+                                            d="M9.99984 0.833252L12.781 6.46847L18.9998 7.37725L14.4998 11.7648L15.5623 17.9583L9.99984 15.0333L4.43734 17.9583L5.49984 11.7648L0.999837 7.37725L7.21859 6.46847L9.99984 0.833252Z"
+                                            fill="#F4BE18" />
+                                    </svg>
+                                </div>
+                                <div class="testimonials_date">13 июля 2025</div>
+                            </div>
+                            <p class="testimonials_text">Очень часто приходится работать с разными студиями звукозаписи,
+                                и вроде во всех все как-то обыденно. Но мне хотелось бы порекомендовать студию
+                                звукозаписи «Звукозапись.Москва». Очень здорово, что есть выбор локаций, а запись
+                                организована быстро, четко и без накладок.</p>
+                            <button class="testimonials_more" type="button">Читать полностью</button>
+                        </div>
+                        <div class="swiper-slide testimonials_card">
+                            <div class="testimonials_card_head">
+                                <div class="testimonials_avatar"><img src="assets/images/profile3.png" alt=""></div>
+                                <div class="testimonials_person">
+                                    <h3 class="testimonials_name">Алина Новикова</h3>
+                                    <p class="testimonials_meta">Запись песни в подарок</p>
+                                </div>
+                            </div>
+                            <div class="testimonials_rating">
+                                <div class="testimonials_stars">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 19" fill="none"
+                                        aria-hidden="true">
+                                        <path
+                                            d="M9.99984 0.833252L12.781 6.46847L18.9998 7.37725L14.4998 11.7648L15.5623 17.9583L9.99984 15.0333L4.43734 17.9583L5.49984 11.7648L0.999837 7.37725L7.21859 6.46847L9.99984 0.833252Z"
+                                            fill="#F4BE18" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 19" fill="none"
+                                        aria-hidden="true">
+                                        <path
+                                            d="M9.99984 0.833252L12.781 6.46847L18.9998 7.37725L14.4998 11.7648L15.5623 17.9583L9.99984 15.0333L4.43734 17.9583L5.49984 11.7648L0.999837 7.37725L7.21859 6.46847L9.99984 0.833252Z"
+                                            fill="#F4BE18" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 19" fill="none"
+                                        aria-hidden="true">
+                                        <path
+                                            d="M9.99984 0.833252L12.781 6.46847L18.9998 7.37725L14.4998 11.7648L15.5623 17.9583L9.99984 15.0333L4.43734 17.9583L5.49984 11.7648L0.999837 7.37725L7.21859 6.46847L9.99984 0.833252Z"
+                                            fill="#F4BE18" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 19" fill="none"
+                                        aria-hidden="true">
+                                        <path
+                                            d="M9.99984 0.833252L12.781 6.46847L18.9998 7.37725L14.4998 11.7648L15.5623 17.9583L9.99984 15.0333L4.43734 17.9583L5.49984 11.7648L0.999837 7.37725L7.21859 6.46847L9.99984 0.833252Z"
+                                            fill="#F4BE18" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 19" fill="none"
+                                        aria-hidden="true">
+                                        <path
+                                            d="M9.99984 0.833252L12.781 6.46847L18.9998 7.37725L14.4998 11.7648L15.5623 17.9583L9.99984 15.0333L4.43734 17.9583L5.49984 11.7648L0.999837 7.37725L7.21859 6.46847L9.99984 0.833252Z"
+                                            fill="#F4BE18" />
+                                    </svg>
+                                </div>
+                                <div class="testimonials_date">13 июля 2025</div>
+                            </div>
+                            <p class="testimonials_text">Записывали в студии «Звукозапись.Москва» корпоративную песню с
+                                коллегами, ребята справились с задачей на 5+! Просто отлично записали и обработали наш
+                                дружный коллектив «поющих» сотрудников. Получилось душевно, живо и при этом
+                                профессионально.</p>
+                            <button class="testimonials_more" type="button">Читать полностью</button>
+                        </div>
+                        <div class="swiper-slide testimonials_card">
+                            <div class="testimonials_card_head">
+                                <div class="testimonials_avatar"><img src="assets/images/profile1.png" alt=""></div>
+                                <div class="testimonials_person">
+                                    <h3 class="testimonials_name">Вячеслав Мельников</h3>
+                                    <p class="testimonials_meta">Москва</p>
+                                </div>
+                            </div>
+                            <div class="testimonials_rating">
+                                <div class="testimonials_stars">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 19" fill="none"
+                                        aria-hidden="true">
+                                        <path
+                                            d="M9.99984 0.833252L12.781 6.46847L18.9998 7.37725L14.4998 11.7648L15.5623 17.9583L9.99984 15.0333L4.43734 17.9583L5.49984 11.7648L0.999837 7.37725L7.21859 6.46847L9.99984 0.833252Z"
+                                            fill="#F4BE18" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 19" fill="none"
+                                        aria-hidden="true">
+                                        <path
+                                            d="M9.99984 0.833252L12.781 6.46847L18.9998 7.37725L14.4998 11.7648L15.5623 17.9583L9.99984 15.0333L4.43734 17.9583L5.49984 11.7648L0.999837 7.37725L7.21859 6.46847L9.99984 0.833252Z"
+                                            fill="#F4BE18" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 19" fill="none"
+                                        aria-hidden="true">
+                                        <path
+                                            d="M9.99984 0.833252L12.781 6.46847L18.9998 7.37725L14.4998 11.7648L15.5623 17.9583L9.99984 15.0333L4.43734 17.9583L5.49984 11.7648L0.999837 7.37725L7.21859 6.46847L9.99984 0.833252Z"
+                                            fill="#F4BE18" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 19" fill="none"
+                                        aria-hidden="true">
+                                        <path
+                                            d="M9.99984 0.833252L12.781 6.46847L18.9998 7.37725L14.4998 11.7648L15.5623 17.9583L9.99984 15.0333L4.43734 17.9583L5.49984 11.7648L0.999837 7.37725L7.21859 6.46847L9.99984 0.833252Z"
+                                            fill="#F4BE18" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 19" fill="none"
+                                        aria-hidden="true">
+                                        <path
+                                            d="M9.99984 0.833252L12.781 6.46847L18.9998 7.37725L14.4998 11.7648L15.5623 17.9583L9.99984 15.0333L4.43734 17.9583L5.49984 11.7648L0.999837 7.37725L7.21859 6.46847L9.99984 0.833252Z"
+                                            fill="#F4BE18" />
+                                    </svg>
+                                </div>
+                                <div class="testimonials_date">13 июля 2025</div>
+                            </div>
+                            <p class="testimonials_text">Очень часто приходится работать с разными студиями звукозаписи,
+                                и вроде во всех все как-то обыденно. Но мне хотелось бы порекомендовать студию записи
+                                «Звукозапись.Москва». Очень здорово, что есть выбор, а инженеры помогают быстро поймать
+                                нужное звучание и комфортный темп записи.</p>
+                            <button class="testimonials_more" type="button">Читать полностью</button>
+                        </div>
+                        <div class="swiper-slide testimonials_card">
+                            <div class="testimonials_card_head">
+                                <div class="testimonials_avatar"><img src="assets/images/profile2.png" alt=""></div>
+                                <div class="testimonials_person">
+                                    <h3 class="testimonials_name">Алексей Самойлов</h3>
+                                    <p class="testimonials_meta">Запись в студии</p>
+                                </div>
+                            </div>
+                            <div class="testimonials_rating">
+                                <div class="testimonials_stars">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 19" fill="none"
+                                        aria-hidden="true">
+                                        <path
+                                            d="M9.99984 0.833252L12.781 6.46847L18.9998 7.37725L14.4998 11.7648L15.5623 17.9583L9.99984 15.0333L4.43734 17.9583L5.49984 11.7648L0.999837 7.37725L7.21859 6.46847L9.99984 0.833252Z"
+                                            fill="#F4BE18" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 19" fill="none"
+                                        aria-hidden="true">
+                                        <path
+                                            d="M9.99984 0.833252L12.781 6.46847L18.9998 7.37725L14.4998 11.7648L15.5623 17.9583L9.99984 15.0333L4.43734 17.9583L5.49984 11.7648L0.999837 7.37725L7.21859 6.46847L9.99984 0.833252Z"
+                                            fill="#F4BE18" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 19" fill="none"
+                                        aria-hidden="true">
+                                        <path
+                                            d="M9.99984 0.833252L12.781 6.46847L18.9998 7.37725L14.4998 11.7648L15.5623 17.9583L9.99984 15.0333L4.43734 17.9583L5.49984 11.7648L0.999837 7.37725L7.21859 6.46847L9.99984 0.833252Z"
+                                            fill="#F4BE18" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 19" fill="none"
+                                        aria-hidden="true">
+                                        <path
+                                            d="M9.99984 0.833252L12.781 6.46847L18.9998 7.37725L14.4998 11.7648L15.5623 17.9583L9.99984 15.0333L4.43734 17.9583L5.49984 11.7648L0.999837 7.37725L7.21859 6.46847L9.99984 0.833252Z"
+                                            fill="#F4BE18" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 19" fill="none"
+                                        aria-hidden="true">
+                                        <path
+                                            d="M9.99984 0.833252L12.781 6.46847L18.9998 7.37725L14.4998 11.7648L15.5623 17.9583L9.99984 15.0333L4.43734 17.9583L5.49984 11.7648L0.999837 7.37725L7.21859 6.46847L9.99984 0.833252Z"
+                                            fill="#F4BE18" />
+                                    </svg>
+                                </div>
+                                <div class="testimonials_date">13 июля 2025</div>
+                            </div>
+                            <p class="testimonials_text">Очень часто приходится работать с разными студиями звукозаписи,
+                                и вроде во всех все как-то обыденно. Но мне хотелось бы порекомендовать студию
+                                звукозаписи «Звукозапись.Москва». Очень здорово, что есть выбор, качественный звук и
+                                понятный процесс на каждом этапе работы.</p>
+                            <button class="testimonials_more" type="button">Читать полностью</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonials_progress" aria-hidden="true">
+                    <span class="testimonials_progress_current" id="testimonialsProgress"></span>
+                </div>
+
+            </section>
+            <section class="faq screen">
+                <div class="container">
+                    <h2 class="section_title">
+                        ТОП <span>5 ВОПРОСОВ</span> И ОТВЕТОВ НА НИХ
+                    </h2>
+                    <div class="faq_items">
+                        <article class="faq_item is-active">
+                            <button class="faq_trigger" type="button" aria-expanded="true">
+                                <span class="faq_order">01</span>
+                                <span class="faq_title">За сколько дней нужно бронировать студию звукозаписи ?</span>
+                                <span class="faq_toggle" aria-hidden="true">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                                        fill="none">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M16.3075 12.9067C16.0829 13.1688 15.6883 13.1992 15.4263 12.9745L9.99967 8.32316L4.57308 12.9745C4.311 13.1992 3.91644 13.1688 3.6918 12.9067C3.46716 12.6447 3.49751 12.2501 3.75959 12.0255L9.59292 7.02545C9.82698 6.82483 10.1724 6.82483 10.4064 7.02545L16.2397 12.0255C16.5018 12.2501 16.5322 12.6447 16.3075 12.9067Z"
+                                            fill="white" />
+                                    </svg>
+                                </span>
+                            </button>
+                            <div class="faq_content">
+                                <p class="faq_description">Забронировать студию звукозаписи лучше за несколько дней до
+                                    запланированной даты посещения. Если вам понадобилась срочная аренда студии, то вы
+                                    также можете связаться с менеджером и уточнить наличие свободных «окон» в
+                                    расписании. Обратите внимание, чем раньше вы оставите заявку на бронирование, тем
+                                    вероятнее, что студия будет свободна. Бронирование производится по телефону или
+                                    онлайн в разделе <span>Контакты.</span></p>
+                            </div>
+                        </article>
+                        <article class="faq_item">
+                            <button class="faq_trigger" type="button" aria-expanded="false">
+                                <span class="faq_order">02</span>
+                                <span class="faq_title">Сколько стоит запись песни с обработкой ?</span>
+                                <span class="faq_toggle" aria-hidden="true">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                                        fill="none">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M16.3075 12.9067C16.0829 13.1688 15.6883 13.1992 15.4263 12.9745L9.99967 8.32316L4.57308 12.9745C4.311 13.1992 3.91644 13.1688 3.6918 12.9067C3.46716 12.6447 3.49751 12.2501 3.75959 12.0255L9.59292 7.02545C9.82698 6.82483 10.1724 6.82483 10.4064 7.02545L16.2397 12.0255C16.5018 12.2501 16.5322 12.6447 16.3075 12.9067Z"
+                                            fill="white" />
+                                    </svg>
+                                </span>
+                            </button>
+                            <div class="faq_content" hidden>
+                                <p class="faq_description">Стоимость зависит от формата записи, длительности сессии,
+                                    сложности аранжировки и объема постобработки. Точную цену мы рассчитываем после
+                                    короткого брифа, чтобы сразу предложить оптимальный пакет без лишних услуг.</p>
+                            </div>
+                        </article>
+                        <article class="faq_item">
+                            <button class="faq_trigger" type="button" aria-expanded="false">
+                                <span class="faq_order">03</span>
+                                <span class="faq_title">Какие микрофоны вы используете для записи вокала ?</span>
+                                <span class="faq_toggle" aria-hidden="true">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                                        fill="none">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M16.3075 12.9067C16.0829 13.1688 15.6883 13.1992 15.4263 12.9745L9.99967 8.32316L4.57308 12.9745C4.311 13.1992 3.91644 13.1688 3.6918 12.9067C3.46716 12.6447 3.49751 12.2501 3.75959 12.0255L9.59292 7.02545C9.82698 6.82483 10.1724 6.82483 10.4064 7.02545L16.2397 12.0255C16.5018 12.2501 16.5322 12.6447 16.3075 12.9067Z"
+                                            fill="white" />
+                                    </svg>
+                                </span>
+                            </button>
+                            <div class="faq_content" hidden>
+                                <p class="faq_description">Мы подбираем микрофон под конкретный тембр и задачу. В студии
+                                    используются несколько вариантов для записи вокала, поэтому перед сессией инженер
+                                    помогает выбрать тот микрофон, который лучше всего раскроет ваш голос.</p>
+                            </div>
+                        </article>
+                        <article class="faq_item">
+                            <button class="faq_trigger" type="button" aria-expanded="false">
+                                <span class="faq_order">04</span>
+                                <span class="faq_title">Пишите ли вы музыку (аранжировку) и тексты ?</span>
+                                <span class="faq_toggle" aria-hidden="true">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                                        fill="none">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M16.3075 12.9067C16.0829 13.1688 15.6883 13.1992 15.4263 12.9745L9.99967 8.32316L4.57308 12.9745C4.311 13.1992 3.91644 13.1688 3.6918 12.9067C3.46716 12.6447 3.49751 12.2501 3.75959 12.0255L9.59292 7.02545C9.82698 6.82483 10.1724 6.82483 10.4064 7.02545L16.2397 12.0255C16.5018 12.2501 16.5322 12.6447 16.3075 12.9067Z"
+                                            fill="white" />
+                                    </svg>
+                                </span>
+                            </button>
+                            <div class="faq_content" hidden>
+                                <p class="faq_description">Да, мы можем помочь с созданием аранжировки, мелодии и
+                                    доработкой текста. Если у вас уже есть идея, референс или черновик, команда поможет
+                                    превратить это в готовую песню под запись.</p>
+                            </div>
+                        </article>
+                        <article class="faq_item">
+                            <button class="faq_trigger" type="button" aria-expanded="false">
+                                <span class="faq_order">05</span>
+                                <span class="faq_title">Предоставляете ли вы дополнительные услуги? Например, съемка
+                                    видеоклипа для моей песни ?</span>
+                                <span class="faq_toggle" aria-hidden="true">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                                        fill="none">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M16.3075 12.9067C16.0829 13.1688 15.6883 13.1992 15.4263 12.9745L9.99967 8.32316L4.57308 12.9745C4.311 13.1992 3.91644 13.1688 3.6918 12.9067C3.46716 12.6447 3.49751 12.2501 3.75959 12.0255L9.59292 7.02545C9.82698 6.82483 10.1724 6.82483 10.4064 7.02545L16.2397 12.0255C16.5018 12.2501 16.5322 12.6447 16.3075 12.9067Z"
+                                            fill="white" />
+                                    </svg>
+                                </span>
+                            </button>
+                            <div class="faq_content" hidden>
+                                <p class="faq_description">Да, помимо записи и обработки мы можем организовать
+                                    дополнительные услуги: съемку видеоклипа, создание lyric video, сведение, мастеринг,
+                                    публикацию и подготовку контента для релиза. Набор услуг зависит от вашей задачи.
+                                </p>
+                            </div>
+                        </article>
+                        <article class="faq_item">
+                            <button class="faq_trigger" type="button" aria-expanded="false">
+                                <span class="faq_order">06</span>
+                                <span class="faq_title">Сколько стоит запись песни с обработкой ?</span>
+                                <span class="faq_toggle" aria-hidden="true">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                                        fill="none">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M16.3075 12.9067C16.0829 13.1688 15.6883 13.1992 15.4263 12.9745L9.99967 8.32316L4.57308 12.9745C4.311 13.1992 3.91644 13.1688 3.6918 12.9067C3.46716 12.6447 3.49751 12.2501 3.75959 12.0255L9.59292 7.02545C9.82698 6.82483 10.1724 6.82483 10.4064 7.02545L16.2397 12.0255C16.5018 12.2501 16.5322 12.6447 16.3075 12.9067Z"
+                                            fill="white" />
+                                    </svg>
+                                </span>
+                            </button>
+                            <div class="faq_content" hidden>
+                                <p class="faq_description">Если вам нужен полный цикл под ключ, стоимость рассчитывается
+                                    по составу работ: запись, редактура, тюнинг, сведение и мастеринг. Напишите нам
+                                    задачу, и мы быстро сориентируем по срокам и финальной цене.</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+            <section class="booking last screen">
+                <div class="container">
+                    <div class="booking_top">
+                        <h2 class="section_title">
+                            получите <span>консультацию</span> <br>по записи звука в студии
+                        </h2>
+                        <p> <span>Звукозапись.Москва </span> — это сеть профессиональных студий звукозаписи. Чтобы
+                            забронировать
+                            аренду студии или заказать услуги, свяжитесь с нами по телефону или напишите в мессенджер
+                        </p>
+                    </div>
+                    <div class="booking_component">
+                        <div class="booking_content">
+                            <h4 class="booking_form_title">Заполните форму</h4>
+                            <form action="#" class="booking_form">
+                                <div class="booking_form_top">
+                                    <div class="booking_form_first">
+                                        <div class="booking_form_input">
+                                            <span>Имя</span>
+                                            <input type="text" placeholder="Ваш имя">
+                                        </div>
+                                        <div class="booking_social">
+                                            <span>Способ связи *</span>
+                                            <ul>
+                                                <li><a href=""><svg xmlns="http://www.w3.org/2000/svg" width="15"
+                                                            height="15" viewBox="0 0 15 15" fill="none">
+                                                            <path
+                                                                d="M12.8049 2.1875C11.3937 0.781249 9.51219 0 7.52613 0C3.39721 0 0.052264 3.33333 0.052264 7.44792C0.052264 8.75 0.418118 10.0521 1.0453 11.1458L0 15L3.97213 13.9583C5.06969 14.5313 6.27178 14.8438 7.52613 14.8438C11.6551 14.8438 15 11.5104 15 7.39583C14.9477 5.46875 14.216 3.59375 12.8049 2.1875ZM11.1324 10.1042C10.9756 10.5208 10.2439 10.9375 9.87805 10.9896C9.56446 11.0417 9.14634 11.0417 8.72822 10.9375C8.4669 10.8333 8.10105 10.7292 7.68293 10.5208C5.80139 9.73958 4.5993 7.86458 4.49477 7.70833C4.39025 7.60417 3.7108 6.71875 3.7108 5.78125C3.7108 4.84375 4.18118 4.42708 4.33798 4.21875C4.49477 4.01042 4.70383 4.01042 4.86063 4.01042C4.96516 4.01042 5.12195 4.01042 5.22648 4.01042C5.33101 4.01042 5.4878 3.95833 5.6446 4.32292C5.80139 4.6875 6.16725 5.625 6.21951 5.67708C6.27178 5.78125 6.27178 5.88542 6.21951 5.98958C6.16725 6.09375 6.11498 6.19792 6.01045 6.30208C5.90592 6.40625 5.80139 6.5625 5.74913 6.61458C5.6446 6.71875 5.54007 6.82292 5.6446 6.97917C5.74913 7.1875 6.11498 7.76042 6.6899 8.28125C7.4216 8.90625 7.99652 9.11458 8.20558 9.21875C8.41463 9.32292 8.51916 9.27083 8.62369 9.16667C8.72822 9.0625 9.09408 8.64583 9.19861 8.4375C9.30314 8.22917 9.45993 8.28125 9.61672 8.33333C9.77352 8.38542 10.7143 8.85417 10.8711 8.95833C11.0801 9.0625 11.1847 9.11458 11.2369 9.16667C11.2892 9.32292 11.2892 9.6875 11.1324 10.1042Z"
+                                                                fill="#25C23D" />
+                                                        </svg></a></li>
+                                                <li><a href="">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="14"
+                                                            viewBox="0 0 15 14" fill="none">
+                                                            <path
+                                                                d="M15 0.49595L12.6273 13.4172C12.6273 13.4172 12.2953 14.313 11.3833 13.8834L5.90888 9.34918L5.88349 9.33582C6.62296 8.61856 12.3572 3.04925 12.6078 2.79681C12.9957 2.40583 12.7549 2.17307 12.3044 2.46841L3.83431 8.27892L0.566557 7.09122C0.566557 7.09122 0.0523084 6.89362 0.00283645 6.46397C-0.0472864 6.03361 0.583481 5.80086 0.583481 5.80086L13.9051 0.155604C13.9051 0.155604 15 -0.364058 15 0.49595Z"
+                                                                fill="#22B5FF" />
+                                                        </svg>
+                                                    </a></li>
+                                                <li><a href="">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15"
+                                                            viewBox="0 0 15 15" fill="none">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                                d="M7.66115 14.9572C6.18909 14.9572 5.505 14.7414 4.31589 13.878C3.56374 14.8493 1.18194 15.6083 1.07808 14.3097C1.07808 13.3349 0.863178 12.5111 0.619625 11.6118C0.329512 10.5039 0 9.27001 0 7.4822C0 3.21231 3.48853 0 7.62175 0C11.7586 0 15 3.37058 15 7.52176C15.0138 11.6087 11.7304 14.9354 7.66115 14.9572ZM7.72204 3.69074C5.70915 3.58642 4.14039 4.98573 3.79297 7.18003C3.50644 8.99662 4.01503 11.2089 4.44841 11.324C4.65615 11.3744 5.17907 10.9499 5.505 10.6226C6.04394 10.9965 6.67153 11.2211 7.32448 11.2737C9.41016 11.3744 11.1923 9.77968 11.3323 7.68724C11.4139 5.59037 9.80801 3.81433 7.72204 3.69433L7.72204 3.69074Z"
+                                                                fill="#5700FF" />
+                                                        </svg>
+                                                    </a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="booking_form_input full">
+                                        <span>Номер телефона *</span>
+                                        <input type="tel" placeholder="+7" name="tel">
+                                    </div>
+                                    <label class="checkbox_content">
+                                        <div class="custom_checkbox">
+                                            <input type="checkbox" name="confirm" checked>
+                                            <span class="checkmark"></span>
+                                        </div>
+                                        <p>Соглашаюсь на обработку персональных данных в соответствии с
+                                            условиями <a href="#">пользовательского соглашения</a></p>
+                                    </label>
+                                </div>
+                                <button class="button">
+                                    <span>Забронировать студию</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                                        fill="none">
+                                        <rect width="20" height="20" fill="#E03131" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M7.5 5.625C7.15482 5.625 6.875 5.34518 6.875 5C6.875 4.65482 7.15482 4.375 7.5 4.375H15C15.3452 4.375 15.625 4.65482 15.625 5V12.5C15.625 12.8452 15.3452 13.125 15 13.125C14.6548 13.125 14.375 12.8452 14.375 12.5V6.50888L5.44194 15.4419C5.19786 15.686 4.80214 15.686 4.55806 15.4419C4.31398 15.1979 4.31398 14.8021 4.55806 14.5581L13.4911 5.625H7.5Z"
+                                            fill="white" />
+                                    </svg>
+                                </button>
+                            </form>
+                        </div>
+                        <div class="booking_socials">
+                            <h4 class="booking_form_title">Или свяжитесь с нами напрямую</h4>
+                            <div class="booking_social_items">
+                                <a href="#" class="booking_social_item">
+                                    <span>Позвонить</span>
+                                    <img src="assets/images/phone_icon.svg" alt="">
+                                </a>
+                                <a href="#" class="booking_social_item">
+                                    <span>Написать в Telegram</span>
+                                    <img src="assets/images/telegram_icon.svg" alt="">
+                                </a>
+                                <a href="#" class="booking_social_item">
+                                    <span>Написать в MAX</span>
+                                    <img src="assets/images/q_icon.svg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </section>
         </main>
+        <footer class="footer screen">
+            <div class="container">
+                <div class="footer_items">
+                    <div class="footer_item first">
+                        <div class="footer_item_top">
+                            <div class="footer_logo">
+                                <img src="assets/images/footer_icon.svg" alt="">
+                                <div class="footer_logo_info">
+                                    <p>ЗВУКОЗАПИСЬ</p>
+                                    <span>Москва</span>
+                                </div>
+                            </div>
+                            <p class="footer_item_description">Это профессиональные услуги в сфере звукозаписи, аудио и
+                                видео продакшена. На рынке с 2009
+                                года за этот срок наша команда реализовала большое удачных проектов. Наши основные
+                                направления: запись, сведение, мастеринг, видеосъемка.</p>
+                        </div>
+                        <ul class="footer_item_social">
+                            <li>
+                                <a href="">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12"
+                                        fill="none">
+                                        <path
+                                            d="M6 1.08434C7.59036 1.08434 7.80723 1.08434 8.45783 1.08434C9.03615 1.08434 9.3253 1.22892 9.54217 1.30121C9.83133 1.44578 10.0482 1.51807 10.2651 1.73494C10.4819 1.95181 10.6265 2.16868 10.6988 2.45783C10.7711 2.6747 10.8434 2.96386 10.9157 3.54217C10.9157 4.19277 10.9157 4.33735 10.9157 6C10.9157 7.66265 10.9157 7.80723 10.9157 8.45783C10.9157 9.03615 10.7711 9.3253 10.6988 9.54217C10.5542 9.83133 10.4819 10.0482 10.2651 10.2651C10.0482 10.4819 9.83133 10.6265 9.54217 10.6988C9.3253 10.7711 9.03615 10.8434 8.45783 10.9157C7.80723 10.9157 7.66265 10.9157 6 10.9157C4.33735 10.9157 4.19277 10.9157 3.54217 10.9157C2.96386 10.9157 2.6747 10.7711 2.45783 10.6988C2.16868 10.5542 1.95181 10.4819 1.73494 10.2651C1.51807 10.0482 1.37349 9.83133 1.30121 9.54217C1.22892 9.3253 1.15663 9.03615 1.08434 8.45783C1.08434 7.80723 1.08434 7.66265 1.08434 6C1.08434 4.33735 1.08434 4.19277 1.08434 3.54217C1.08434 2.96386 1.22892 2.6747 1.30121 2.45783C1.44578 2.16868 1.51807 1.95181 1.73494 1.73494C1.95181 1.51807 2.16868 1.37349 2.45783 1.30121C2.6747 1.22892 2.96386 1.15663 3.54217 1.08434C4.19277 1.08434 4.40964 1.08434 6 1.08434ZM6 0C4.33735 0 4.19277 0 3.54217 0C2.89157 0 2.45783 0.144579 2.09639 0.289157C1.73494 0.433735 1.37349 0.650603 1.01205 1.01205C0.650603 1.37349 0.506025 1.66265 0.289157 2.09639C0.144579 2.45783 0.0722892 2.89157 0 3.54217C0 4.19277 0 4.40964 0 6C0 7.66265 0 7.80723 0 8.45783C0 9.10843 0.144579 9.54217 0.289157 9.90362C0.433735 10.2651 0.650603 10.6265 1.01205 10.988C1.37349 11.3494 1.66265 11.494 2.09639 11.7108C2.45783 11.8554 2.89157 11.9277 3.54217 12C4.19277 12 4.40964 12 6 12C7.59036 12 7.80723 12 8.45783 12C9.10843 12 9.54217 11.8554 9.90362 11.7108C10.2651 11.5663 10.6265 11.3494 10.988 10.988C11.3494 10.6265 11.494 10.3374 11.7108 9.90362C11.8554 9.54217 11.9277 9.10843 12 8.45783C12 7.80723 12 7.59036 12 6C12 4.40964 12 4.19277 12 3.54217C12 2.89157 11.8554 2.45783 11.7108 2.09639C11.5663 1.73494 11.3494 1.37349 10.988 1.01205C10.6265 0.650603 10.3374 0.506025 9.90362 0.289157C9.54217 0.144579 9.10843 0.0722892 8.45783 0C7.80723 0 7.66265 0 6 0Z"
+                                            fill="white" />
+                                        <path
+                                            d="M6 2.89157C4.26506 2.89157 2.89157 4.26506 2.89157 6C2.89157 7.73494 4.26506 9.10843 6 9.10843C7.73494 9.10843 9.10843 7.73494 9.10843 6C9.10843 4.26506 7.73494 2.89157 6 2.89157ZM6 8.0241C4.91566 8.0241 3.9759 7.15663 3.9759 6C3.9759 4.91566 4.84337 3.9759 6 3.9759C7.08434 3.9759 8.0241 4.84337 8.0241 6C8.0241 7.08434 7.08434 8.0241 6 8.0241Z"
+                                            fill="white" />
+                                        <path
+                                            d="M9.18072 3.54217C9.57997 3.54217 9.90362 3.21852 9.90362 2.81928C9.90362 2.42004 9.57997 2.09639 9.18072 2.09639C8.78148 2.09639 8.45783 2.42004 8.45783 2.81928C8.45783 3.21852 8.78148 3.54217 9.18072 3.54217Z"
+                                            fill="white" />
+                                    </svg>
+                                </a>
+                            </li>
+                            <li><a href="">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="8" height="14" viewBox="0 0 8 14"
+                                        fill="none">
+                                        <path
+                                            d="M4.59425 7.41889H6.82756L7.1782 5.13633H4.59379V3.8888C4.59379 2.94059 4.90174 2.09977 5.78335 2.09977H7.2V0.107845C6.9511 0.074029 6.42468 0 5.42998 0C3.35291 0 2.1352 1.10358 2.1352 3.61782V5.13633H0V7.41889H2.1352V13.6926C2.55806 13.7566 2.98637 13.8 3.42604 13.8C3.82347 13.8 4.21136 13.7634 4.59425 13.7113V7.41889Z"
+                                            fill="white" />
+                                    </svg>
+                                </a></li>
+                            <li><a href="">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="10" viewBox="0 0 12 10"
+                                        fill="none">
+                                        <path
+                                            d="M11.76 1.14C11.34 1.32 10.86 1.44 10.38 1.5C10.86 1.2 11.28 0.720002 11.46 0.180002C10.98 0.480002 10.5 0.660002 9.9 0.780002C9.48 0.300002 8.81999 0 8.15999 0C6.83999 0 5.75999 1.08 5.75999 2.4C5.75999 2.58 5.76 2.76 5.82 2.94C3.84 2.82 2.04 1.86 0.839996 0.419998C0.659996 0.779998 0.539996 1.2 0.539996 1.62C0.539996 2.46 0.959998 3.18 1.62 3.6C1.2 3.6 0.839996 3.48 0.539996 3.3C0.539996 4.44 1.37999 5.46 2.45999 5.64C2.27999 5.7 2.04 5.7 1.8 5.7C1.62 5.7 1.5 5.7 1.32 5.64C1.62 6.6 2.52 7.32 3.6 7.32C2.76 7.98 1.74 8.34 0.6 8.34C0.42 8.34 0.24 8.34 0 8.28C1.08 8.94 2.34 9.36 3.72 9.36C8.16 9.36 10.56 5.7 10.56 2.52V2.22C11.04 2.04 11.46 1.62 11.76 1.14Z"
+                                            fill="white" />
+                                    </svg>
+                                </a></li>
+                            <li><a href=""><svg xmlns="http://www.w3.org/2000/svg" width="14" height="9"
+                                        viewBox="0 0 14 9" fill="none">
+                                        <path
+                                            d="M7.18951 8.4C2.67958 8.4 0.107183 5.24685 0 0H2.25909C2.33329 3.85105 3.99875 5.48228 5.31793 5.81862V0H7.4451V3.32132C8.74778 3.17838 10.1164 1.66486 10.5781 0H12.7053C12.5313 0.863446 12.1845 1.68099 11.6866 2.4015C11.1886 3.12201 10.5502 3.72998 9.81137 4.18739C10.6361 4.60533 11.3646 5.1969 11.9487 5.92305C12.5328 6.6492 12.9593 7.49342 13.2 8.4H10.8585C10.6424 7.61257 10.2032 6.90768 9.59603 6.37369C8.98883 5.83971 8.2406 5.50036 7.4451 5.3982V8.4H7.18951V8.4Z"
+                                            fill="white" />
+                                    </svg></a></li>
+                            <li><a href=""><svg xmlns="http://www.w3.org/2000/svg" width="9" height="14"
+                                        viewBox="0 0 9 14" fill="none">
+                                        <path
+                                            d="M7.94259 8.2757C8.25742 7.96086 8.3024 7.5111 8.03254 7.06133C7.80766 6.70152 7.40287 6.52161 6.9531 6.61157C6.7732 6.65654 6.59329 6.7465 6.41338 6.88143C5.0191 7.82594 3.13009 7.78096 1.73582 6.83645C1.64586 6.79147 1.55591 6.74649 1.46595 6.70152C0.97121 6.47663 0.476473 6.56659 0.206613 7.01636C-0.108223 7.46612 -0.0632516 7.96087 0.341538 8.36566C0.431491 8.45561 0.521444 8.50059 0.566421 8.59054L0.6114 8.63551C1.24107 9.13025 2.00568 9.44509 2.99516 9.58002L2.41046 10.1647C1.91572 10.6595 1.37601 11.1992 0.881262 11.6939C0.746333 11.8289 0.566421 12.0537 0.566421 12.3686C0.566421 12.7734 0.791308 13.1781 1.1961 13.3581C1.33103 13.448 1.46595 13.448 1.60088 13.448C1.82577 13.448 2.09563 13.3581 2.27553 13.1332C2.95018 12.4585 3.48991 11.9188 4.02962 11.3791C4.0746 11.3341 4.0746 11.3341 4.0746 11.3341C4.0746 11.3341 4.11958 11.3341 4.11958 11.3791C4.47939 11.7839 4.88418 12.1437 5.24399 12.5485C5.4239 12.7284 5.6038 12.9083 5.78371 13.0882C6.00859 13.3131 6.1885 13.403 6.45836 13.403C6.86315 13.448 7.31291 13.1781 7.49282 12.7734C7.67273 12.4135 7.58277 11.9638 7.26794 11.6939C6.81817 11.2442 6.3684 10.7494 5.87366 10.2996L5.10906 9.53504C5.51385 9.49007 5.96362 9.40012 6.36841 9.22021C7.04306 8.99533 7.5378 8.68049 7.94259 8.2757Z"
+                                            fill="white" />
+                                        <path
+                                            d="M4.0746 7.01635C6.00859 7.01635 7.58277 5.48714 7.58277 3.55315C7.58277 2.60864 7.22296 1.70911 6.54831 1.03446C5.87366 0.359814 5.01911 0 4.11958 0C2.18558 0 0.656376 1.57418 0.6114 3.4632C0.6114 4.40771 0.971214 5.26226 1.64586 5.93691C2.27554 6.65654 3.13009 7.01635 4.0746 7.01635ZM3.08511 2.51869C3.35497 2.24883 3.71478 2.1139 4.0746 2.1139C4.88418 2.1139 5.46887 2.74357 5.46887 3.50818C5.46887 4.31776 4.8392 4.90245 4.0746 4.90245C3.26502 4.90245 2.68033 4.27278 2.68033 3.50818C2.68033 3.14836 2.81525 2.78855 3.08511 2.51869Z"
+                                            fill="white" />
+                                        <path
+                                            d="M7.94259 8.2757C8.25742 7.96086 8.3024 7.5111 8.03254 7.06133C7.80766 6.70152 7.40287 6.52161 6.9531 6.61157C6.7732 6.65654 6.59329 6.7465 6.41338 6.88143C5.0191 7.82594 3.13009 7.78096 1.73582 6.83645C1.64586 6.79147 1.55591 6.74649 1.46595 6.70152C0.97121 6.47663 0.476473 6.56659 0.206613 7.01636C-0.108223 7.46612 -0.0632516 7.96087 0.341538 8.36566C0.431491 8.45561 0.521444 8.50059 0.566421 8.59054L0.6114 8.63551C1.24107 9.13025 2.00568 9.44509 2.99516 9.58002L2.41046 10.1647C1.91572 10.6595 1.37601 11.1992 0.881262 11.6939C0.746333 11.8289 0.566421 12.0537 0.566421 12.3686C0.566421 12.7734 0.791308 13.1781 1.1961 13.3581C1.33103 13.448 1.46595 13.448 1.60088 13.448C1.82577 13.448 2.09563 13.3581 2.27553 13.1332C2.95018 12.4585 3.48991 11.9188 4.02962 11.3791C4.0746 11.3341 4.0746 11.3341 4.0746 11.3341C4.0746 11.3341 4.11958 11.3341 4.11958 11.3791C4.47939 11.7839 4.88418 12.1437 5.24399 12.5485C5.4239 12.7284 5.6038 12.9083 5.78371 13.0882C6.00859 13.3131 6.1885 13.403 6.45836 13.403C6.86315 13.448 7.31291 13.1781 7.49282 12.7734C7.67273 12.4135 7.58277 11.9638 7.26794 11.6939C6.81817 11.2442 6.3684 10.7494 5.87366 10.2996L5.10906 9.53504C5.51385 9.49007 5.96362 9.40012 6.36841 9.22021C7.04306 8.99533 7.5378 8.68049 7.94259 8.2757Z"
+                                            fill="white" />
+                                    </svg></a></li>
+                            <li><a href=""><svg xmlns="http://www.w3.org/2000/svg" width="14" height="9"
+                                        viewBox="0 0 14 9" fill="none">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M1.35749 8.73409C1.12214 8.66446 0.907389 8.54058 0.731374 8.37292C0.555359 8.20525 0.423242 7.99871 0.346168 7.77074C-0.0942474 6.59242 -0.224741 1.67216 0.623467 0.700844C0.905766 0.384869 1.30434 0.190331 1.73266 0.159456C4.00814 -0.0793922 11.0385 -0.0475456 11.8459 0.239072C12.073 0.310994 12.2805 0.432154 12.4528 0.593473C12.6251 0.754793 12.7578 0.952089 12.8409 1.17058C13.3221 2.3887 13.3384 6.81535 12.7757 7.9857C12.6264 8.29035 12.3765 8.53712 12.0661 8.68632C11.2179 9.10032 2.483 9.09236 1.35749 8.73409V8.73409ZM4.97053 6.42523L9.04846 4.35521L4.97053 2.26928V6.42523Z"
+                                            fill="white" />
+                                    </svg></a></li>
+                        </ul>
+                    </div>
+                    <div class="footer_item ">
+                        <div class="footer_item_title">
+                            ПОПУЛЯРНЫЕ УСЛУГИ
+                        </div>
+                        <ul>
+                            <li><a href="">Аренда студии звукозаписи</a></li>
+                            <li><a href="">Сведение и мастеринг песни </a></li>
+                            <li><a href=""> Аранжировка песни на заказ</a></li>
+                            <li><a href=""> Запись песни под минус</a></li>
+                            <li><a href=""> Выездная студия <br> звукозаписи </a></li>
+                            <li><a href=""> Услуги бэк вокалиста/ <br>вокалиста</a></li>
+                            <li><a href=""> Продвижение музыки</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer_item ">
+                        <div class="footer_item_title">
+                            ПОПУЛЯРНЫЕ УСЛУГИ
+                        </div>
+                        <p class="footer_item_info">
+                            Юридический адрес: 107140, г. Москва, ул. 3 <br> Самотечный переулок, дом 11 <br>
+                            ИНН 771574839700 <br>
+                            ОГРН 319774600323545 от 29 мая 2019 г. <br>
+                            ОКВЭД 59.20 <br>
+                            ОКПО 0157390901 <br>
+                            <br>
+                            Банковские реквизиты: <br>
+                            Расчётный <br>
+                            №40802810801500048835 <br>
+                            Название банка: ТОЧКА ПАО БАНКА «ФК <br>
+                            ОТКРЫТИЕ» <br> БИК: 044525999 <br> Город: г. Москва <br> Корр. счет: 30101810845250000999
+                        </p>
+                    </div>
+                    <div class="footer_item ">
+                        <div class="footer_item_title">Контакты</div>
+                        <div class="footer_contens">
+                            <div class="footer_conten">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none">
+                                    <path
+                                        d="M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z"
+                                        fill="#E03131" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M12 7.25C12.4142 7.25 12.75 7.58579 12.75 8V11.6893L15.0303 13.9697C15.3232 14.2626 15.3232 14.7374 15.0303 15.0303C14.7374 15.3232 14.2626 15.3232 13.9697 15.0303L11.4697 12.5303C11.329 12.3897 11.25 12.1989 11.25 12V8C11.25 7.58579 11.5858 7.25 12 7.25Z"
+                                        fill="#0C0C0C" />
+                                </svg>
+                                <span>c 10-00 до 22-00</span>
+                            </div>
+                            <a href="#" class="footer_conten">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none">
+                                    <path
+                                        d="M10.0376 5.31617L10.6866 6.4791C11.2723 7.52858 11.0372 8.90533 10.1147 9.8278C10.1147 9.8278 8.99578 10.9467 11.0245 12.9755C13.0532 15.0042 14.1722 13.8853 14.1722 13.8853C15.0947 12.9628 16.4714 12.7277 17.5209 13.3134L18.6838 13.9624C20.2686 14.8468 20.4557 17.0692 19.0628 18.4622C18.2258 19.2992 17.2004 19.9505 16.0669 19.9934C14.1588 20.0658 10.9183 19.5829 7.6677 16.3323C4.41713 13.0817 3.93421 9.84122 4.00655 7.93309C4.04952 6.7996 4.7008 5.77423 5.53781 4.93723C6.93076 3.54428 9.15317 3.73144 10.0376 5.31617Z"
+                                        fill="#E03131" />
+                                </svg>
+                                <span>+7 (925) 831-74-96</span>
+                            </a>
+                            <a href="#" class="footer_conten">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M12 2C7.58172 2 4 6.00258 4 10.5C4 14.9622 6.55332 19.8124 10.5371 21.6744C11.4657 22.1085 12.5343 22.1085 13.4629 21.6744C17.4467 19.8124 20 14.9622 20 10.5C20 6.00258 16.4183 2 12 2ZM12 12C13.1046 12 14 11.1046 14 10C14 8.89543 13.1046 8 12 8C10.8954 8 10 8.89543 10 10C10 11.1046 10.8954 12 12 12Z"
+                                        fill="#E03131" />
+                                </svg>
+                                <span>Селезневская, дом 4</span>
+                            </a>
+                            <a href="mailto:omsrec77@gmail.com" class="footer_conten">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none">
+                                    <path
+                                        d="M22 6C22 7.65685 20.6569 9 19 9C17.3431 9 16 7.65685 16 6C16 4.34315 17.3431 3 19 3C20.6569 3 22 4.34315 22 6Z"
+                                        fill="#E03131" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M14 5H10C6.22876 5 4.34315 5 3.17157 6.17157C2 7.34315 2 9.22876 2 13C2 16.7712 2 18.6569 3.17157 19.8284C4.34315 21 6.22876 21 10 21H14C17.7712 21 19.6569 21 20.8284 19.8284C22 18.6569 22 16.7712 22 13C22 11.5466 22 10.3733 21.9329 9.413C21.1453 10.0905 20.1205 10.5 19 10.5C18.5213 10.5 18.0601 10.4253 17.6274 10.2868L16.2837 11.4066C15.3973 12.1452 14.6789 12.7439 14.0448 13.1517C13.3843 13.5765 12.7411 13.8449 12 13.8449C11.2589 13.8449 10.6157 13.5765 9.95518 13.1517C9.32112 12.7439 8.60271 12.1452 7.71636 11.4066L5.51986 9.57617C5.20165 9.31099 5.15866 8.83807 5.42383 8.51986C5.68901 8.20165 6.16193 8.15866 6.48014 8.42383L8.63903 10.2229C9.57199 11.0004 10.2197 11.5384 10.7666 11.8901C11.2959 12.2306 11.6549 12.3449 12 12.3449C12.3451 12.3449 12.7041 12.2306 13.2334 11.8901C13.7803 11.5384 14.428 11.0004 15.361 10.2229L16.2004 9.52335C15.1643 8.69893 14.5 7.42704 14.5 6C14.5 5.65638 14.5385 5.32175 14.6115 5.0002C14.4133 5 14.2096 5 14 5Z"
+                                        fill="#E03131" />
+                                </svg>
+                                <span>omsrec77@gmail.com</span>
+                            </a>
+                        </div>
+                        <ul class="footer_item_socials">
+                            <li><a href=""><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15"
+                                        viewBox="0 0 15 15" fill="none">
+                                        <path
+                                            d="M12.8049 2.1875C11.3937 0.781249 9.51219 0 7.52613 0C3.39721 0 0.052264 3.33333 0.052264 7.44792C0.052264 8.75 0.418118 10.0521 1.0453 11.1458L0 15L3.97213 13.9583C5.06969 14.5313 6.27178 14.8438 7.52613 14.8438C11.6551 14.8438 15 11.5104 15 7.39583C14.9477 5.46875 14.216 3.59375 12.8049 2.1875ZM11.1324 10.1042C10.9756 10.5208 10.2439 10.9375 9.87805 10.9896C9.56446 11.0417 9.14634 11.0417 8.72822 10.9375C8.4669 10.8333 8.10105 10.7292 7.68293 10.5208C5.80139 9.73958 4.5993 7.86458 4.49477 7.70833C4.39025 7.60417 3.7108 6.71875 3.7108 5.78125C3.7108 4.84375 4.18118 4.42708 4.33798 4.21875C4.49477 4.01042 4.70383 4.01042 4.86063 4.01042C4.96516 4.01042 5.12195 4.01042 5.22648 4.01042C5.33101 4.01042 5.4878 3.95833 5.6446 4.32292C5.80139 4.6875 6.16725 5.625 6.21951 5.67708C6.27178 5.78125 6.27178 5.88542 6.21951 5.98958C6.16725 6.09375 6.11498 6.19792 6.01045 6.30208C5.90592 6.40625 5.80139 6.5625 5.74913 6.61458C5.6446 6.71875 5.54007 6.82292 5.6446 6.97917C5.74913 7.1875 6.11498 7.76042 6.6899 8.28125C7.4216 8.90625 7.99652 9.11458 8.20558 9.21875C8.41463 9.32292 8.51916 9.27083 8.62369 9.16667C8.72822 9.0625 9.09408 8.64583 9.19861 8.4375C9.30314 8.22917 9.45993 8.28125 9.61672 8.33333C9.77352 8.38542 10.7143 8.85417 10.8711 8.95833C11.0801 9.0625 11.1847 9.11458 11.2369 9.16667C11.2892 9.32292 11.2892 9.6875 11.1324 10.1042Z"
+                                            fill="#25C23D" />
+                                    </svg></a></li>
+                            <li><a href=""><svg xmlns="http://www.w3.org/2000/svg" width="15" height="14"
+                                        viewBox="0 0 15 14" fill="none">
+                                        <path
+                                            d="M15 0.49595L12.6273 13.4172C12.6273 13.4172 12.2953 14.313 11.3833 13.8834L5.90888 9.34918L5.88349 9.33582C6.62296 8.61856 12.3572 3.04925 12.6078 2.79681C12.9957 2.40583 12.7549 2.17307 12.3044 2.46841L3.83431 8.27892L0.566557 7.09122C0.566557 7.09122 0.0523084 6.89362 0.00283645 6.46397C-0.0472864 6.03361 0.583481 5.80086 0.583481 5.80086L13.9051 0.155604C13.9051 0.155604 15 -0.364058 15 0.49595Z"
+                                            fill="#22B5FF" />
+                                    </svg></a></li>
+                            <li><a href="">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15"
+                                        fill="none">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M7.66115 14.9572C6.18909 14.9572 5.505 14.7414 4.31589 13.878C3.56374 14.8493 1.18194 15.6083 1.07808 14.3097C1.07808 13.3349 0.863178 12.5111 0.619625 11.6118C0.329512 10.5039 0 9.27001 0 7.4822C0 3.21231 3.48853 0 7.62175 0C11.7586 0 15 3.37058 15 7.52176C15.0138 11.6087 11.7304 14.9354 7.66115 14.9572ZM7.72204 3.69074C5.70915 3.58642 4.14039 4.98573 3.79297 7.18003C3.50644 8.99662 4.01503 11.2089 4.44841 11.324C4.65615 11.3744 5.17907 10.9499 5.505 10.6226C6.04394 10.9965 6.67153 11.2211 7.32448 11.2737C9.41016 11.3744 11.1923 9.77968 11.3323 7.68724C11.4139 5.59037 9.80801 3.81433 7.72204 3.69433L7.72204 3.69074Z"
+                                            fill="#5700FF" />
+                                    </svg>
+                                </a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer_bottom">
+                    <span>Звукозаписывающая компания - "Звукозапись.Москва" Copyright 2008 - 2026</span>
+                    <a href="#">Политика конфиденциальности</a>
+                </div>
+            </div>
+        </footer>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
+    <script src="https://unpkg.com/lenis@1.1.16/dist/lenis.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="assets/js/main.js"></script>
 </body>
 
