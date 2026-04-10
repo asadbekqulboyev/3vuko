@@ -30,9 +30,6 @@
 @font-face {
   font-family: "Buyan-regular";
   src: url(../fonts/BuyanRegular.ttf);
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
 }
 :root {
   --header-h: 132px;
@@ -59,7 +56,9 @@ body {
   width: 100%;
   max-width: 1300px;
   margin: 0 auto;
-  padding: 0 15px;
+  @media (max-width: 1330px) {
+    padding: 0 15px;
+  }
 }
 .button {
   border-radius: 5px;

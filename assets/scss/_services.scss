@@ -11,6 +11,11 @@
   &_content {
     display: flex;
     justify-content: space-between;
+    gap: 35px;
+    &_left {
+      width: 100%;
+      max-width: 513px;
+    }
   }
   .container {
     position: relative;
@@ -25,11 +30,13 @@
   }
   &_title {
     color: #fff;
-    font-family: "Buyan";
+    font-family: "Buyan-regular";
     font-size: 64px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+    letter-spacing: 0%;
+
     .red {
       color: #e03131;
     }
@@ -52,6 +59,8 @@
   }
   &_video {
     position: relative;
+    width: 100%;
+    max-width: 750px;
     .play_img {
       position: absolute;
       top: 50%;

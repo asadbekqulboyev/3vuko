@@ -3,13 +3,7 @@
   position: relative;
   z-index: 3;
   padding: 100px 0;
-  background:
-    radial-gradient(
-      circle at center,
-      rgba(224, 49, 49, 0.08) 0%,
-      rgba(224, 49, 49, 0) 62%
-    ),
-    #0c0c0c;
+  background: #0c0c0c;
   overflow: hidden;
 
   .container {
@@ -73,7 +67,7 @@
       position: absolute;
       top: 60%;
       right: auto;
-      left: 55%;
+      left: 54%;
       width: min(75vw, 866px);
       aspect-ratio: 1;
       transform: translate(-50%, -50%);
@@ -96,6 +90,7 @@
     gap: 20px;
     box-shadow: 0 24px 48px rgba(0, 0, 0, 0.28);
     margin-top: 70px;
+    background: #101010;
   }
 
   &_card_text {

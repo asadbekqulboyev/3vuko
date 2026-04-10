@@ -1,3 +1,25 @@
+const hamburger_menu = document.querySelector(".hamburger_menu");
+const header_mobile = document.querySelector(".header_mobile");
+hamburger_menu.addEventListener("click", function () {
+  header_mobile.classList.toggle("active");
+  this.classList.toggle("active");
+});
+// dropdown mobile
+document.querySelectorAll(".dropdown_menu").forEach((menu) => {
+  menu.addEventListener("click", function (e) {
+    this.classList.toggle("active");
+    if (window.innerWidth <= 768) {
+      e.preventDefault();
+
+      const parentLi = this.closest("li");
+      const submenu = parentLi.querySelector(".dropdown_submenu");
+
+      if (submenu) {
+        submenu.classList.toggle("active");
+      }
+    }
+  });
+});
 const musicData = [
   {
     id: 1,
@@ -35,11 +57,9 @@ const musicData = [
     src: "audio/audio-5.mp3",
   },
 ];
-
 const musicList = document.getElementById("musicList");
 const testimonialsTrack = document.getElementById("testimonialsTrack");
 const testimonialsProgress = document.getElementById("testimonialsProgress");
-
 let currentAudio = null;
 let currentMusicItem = null;
 let galleryResizeFrame = null;
