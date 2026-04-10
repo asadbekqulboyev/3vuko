@@ -57,5 +57,10 @@
     margin: 40px auto 0;
     display: block;
     width: fit-content;
+    transition: all 0.3s linear;
+    &:hover {
+      color: #fff;
+      background: #282828;
+    }
   }
 }

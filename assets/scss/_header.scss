@@ -108,10 +108,20 @@
           svg path {
             transition: all 0.3s ease;
           }
-          &:hover {
-            svg path {
-              fill: #22b5ff;
-            }
+        }
+        &:nth-child(1) a:hover {
+          svg path {
+            fill: #25c23d;
+          }
+        }
+        &:nth-child(2) a:hover {
+          svg path {
+            fill: #22b5ff;
+          }
+        }
+        &:nth-child(3) a:hover {
+          svg path {
+            fill: #5700ff;
           }
         }
       }
@@ -269,7 +279,7 @@
     align-items: center;
     text-decoration: none;
     padding: 8px 24.5px;
-    transition: all .3s linear;
+    transition: all 0.3s linear;
     @media (max-width: 1200px) {
       padding: 8px 20px;
     }
@@ -402,11 +412,11 @@
         fill: #e03131;
       }
       .dropdown_submenu {
-        height: auto;
+        height: auto !important;
         overflow: visible;
         padding: 20px 20px 31px;
         @media (max-width: 768px) {
-          height: 0;
+          height: 0 !important;
           overflow: hidden;
           padding: 0px 20px 0px;
         }

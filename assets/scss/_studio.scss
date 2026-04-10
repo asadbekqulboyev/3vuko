@@ -218,14 +218,20 @@
     gap: 12px;
     padding: 18px;
     box-shadow: 0 18px 40px rgba(0, 0, 0, 0.28);
-    transition:
-      transform 0.25s ease,
-      box-shadow 0.25s ease;
+    transition: all 0.2s linear;
 
     &:hover,
     &:focus-visible {
-      transform: translateX(-50%) translateY(-4px);
+      transform: translateX(-50%) translateY(-1px);
       box-shadow: 0 24px 48px rgba(0, 0, 0, 0.34);
+      background: #e03131;
+      color: #fff;
+      .studio_cta_icon {
+        background: #fff;
+        svg path {
+          stroke: #e03131;
+        }
+      }
     }
   }
 

@@ -45,6 +45,14 @@
       width: 100%;
       padding: 10px;
       margin-top: 28px;
+      svg {
+        transition: all 0.2s linear;
+      }
+      &:hover {
+        svg {
+          transform: rotate(45deg);
+        }
+      }
     }
   }
   &_right {

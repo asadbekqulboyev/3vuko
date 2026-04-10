@@ -70,9 +70,18 @@
       display: flex;
       gap: 18px;
       flex: 0 0 auto;
+      transition: all 1s linear;
+      background-repeat: no-repeat;
       @media (max-width: 768px) {
         width: 100%;
         justify-content: center;
+      }
+      &:hover {
+        background-position: 100% 100%;
+        background-size: 280% 280%;
+      }
+      img {
+        animation: to_right 0.9s linear infinite alternate;
       }
     }
   }
@@ -149,5 +158,13 @@
         line-height: normal;
       }
     }
+  }
+}
+@keyframes to_right {
+  from {
+    transform: translateX(0px);
+  }
+  to {
+    transform: translateX(-5px);
   }
 }

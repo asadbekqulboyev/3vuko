@@ -6,7 +6,6 @@
   position: relative;
   z-index: 3;
   min-height: 100dvh;
-
   &_top {
     display: flex;
     justify-content: space-between;
@@ -267,6 +266,7 @@
     padding: 65px 30px 30px 30px;
     display: flex;
     justify-content: space-between;
+    margin-top: 50px;
   }
 
   .music_cover_wrap {
@@ -471,17 +471,21 @@
     align-items: center;
     justify-content: center;
     text-decoration: none;
-
     color: #fff;
     font-family: Buyan, sans-serif;
     font-size: 22px;
     font-weight: 700;
     text-transform: uppercase;
-
     border-radius: 5px;
     border: 1px solid rgba(255, 255, 255, 0.1);
     background: #0c0c0c;
     padding: 8px 16px;
+    transition: all 0.2s linear;
+    &:hover {
+      background: #fff;
+      border: 1px solid #0c0c0c;
+      color: #0c0c0c;
+    }
   }
 
   @media (max-width: 900px) {

@@ -122,3 +122,10 @@ main {
   scroll-snap-align: start;
   scroll-snap-stop: always;
 }
+main {
+  scroll-snap-type: y mandatory;
+}
+
+.screen {
+  scroll-snap-align: start;
+}

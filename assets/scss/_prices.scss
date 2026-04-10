@@ -3,8 +3,7 @@
   border-radius: 50px 50px 0 0;
   background: #f4f4f4;
   background-size: 100%;
-  top: var(--header-h);
-  min-height: calc(100vh - var(--header-h));
+  min-height: 100vh;
   overflow-y: auto;
   position: relative;
   top: 0;
@@ -38,6 +37,11 @@
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.08);
     padding: 40px;
     position: relative;
+    cursor: pointer;
+    transition: all 0.3s linear;
+    &:hover {
+      box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.08);
+    }
     &:first-child {
       p {
         width: calc(100% + 22px);

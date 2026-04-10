@@ -7,8 +7,8 @@ hamburger_menu.addEventListener("click", function () {
 // dropdown mobile
 document.querySelectorAll(".dropdown_menu").forEach((menu) => {
   menu.addEventListener("click", function (e) {
-    this.classList.toggle("active");
     if (window.innerWidth <= 768) {
+      this.classList.toggle("active");
       e.preventDefault();
 
       const parentLi = this.closest("li");
@@ -518,7 +518,9 @@ function initPage() {
 initPage();
 const lenis = new Lenis({
   duration: 1.2,
+  easing: (t) => 1 - Math.pow(1 - t, 3), // smooth easing
   smoothWheel: true,
+  smoothTouch: false,
 });
 
 function raf(time) {
