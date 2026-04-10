@@ -1342,11 +1342,17 @@
 .gallery .gallery_items.first.is-ready {
   animation: left_animate var(--gallery-duration, 28s) linear infinite;
 }
+.gallery .gallery_items.first.is-ready:hover {
+  animation-play-state: paused;
+}
 .gallery .gallery_items:last-of-type {
   margin-top: 20px;
 }
 .gallery .gallery_items:last-of-type.is-ready {
   animation: right_animate var(--gallery-duration, 28s) linear infinite;
+}
+.gallery .gallery_items:last-of-type.is-ready:hover {
+  animation-play-state: paused;
 }
 .gallery_item {
   width: 420px;

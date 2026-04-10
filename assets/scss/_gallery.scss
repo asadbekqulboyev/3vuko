@@ -26,12 +26,18 @@
   .gallery_items.first {
     &.is-ready {
       animation: left_animate var(--gallery-duration, 28s) linear infinite;
+      &:hover {
+        animation-play-state: paused;
+      }
     }
   }
   .gallery_items:last-of-type {
     margin-top: 20px;
     &.is-ready {
       animation: right_animate var(--gallery-duration, 28s) linear infinite;
+      &:hover {
+        animation-play-state: paused;
+      }
     }
   }
   &_item {
