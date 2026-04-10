@@ -12,9 +12,15 @@
     display: flex;
     justify-content: space-between;
     gap: 35px;
+    @media (max-width: 1330px) {
+      gap: 20px;
+    }
     &_left {
       width: 100%;
       max-width: 513px;
+      @media (max-width: 1330px) {
+        max-width: 533px;
+      }
     }
   }
   .container {
@@ -36,7 +42,12 @@
     font-weight: 700;
     line-height: normal;
     letter-spacing: 0%;
-
+    @media (max-width: 1330px) {
+      font-size: 56px;
+    }
+    @media (max-width:1214px) {
+      
+    }
     .red {
       color: #e03131;
     }
@@ -52,7 +63,7 @@
       font-weight: 400;
       line-height: normal;
       text-transform: uppercase;
-      padding: 11.5px 20px;
+      padding: 11.5px 11px;
       position: relative;
       top: -17px;
     }
@@ -61,6 +72,9 @@
     position: relative;
     width: 100%;
     max-width: 750px;
+    @media (max-width: 1330px) {
+      max-width: 700px;
+    }
     .play_img {
       position: absolute;
       top: 50%;
