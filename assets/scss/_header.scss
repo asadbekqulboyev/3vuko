@@ -269,6 +269,7 @@
     align-items: center;
     text-decoration: none;
     padding: 8px 24.5px;
+    transition: all .3s linear;
     @media (max-width: 1200px) {
       padding: 8px 20px;
     }
@@ -283,6 +284,9 @@
       font-weight: 700;
       line-height: normal;
       text-transform: uppercase;
+    }
+    &:hover {
+      background: #e03131;
     }
   }
   &_menu {

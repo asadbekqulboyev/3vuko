@@ -294,6 +294,7 @@
   align-items: center;
   text-decoration: none;
   padding: 8px 24.5px;
+  transition: all 0.3s linear;
 }
 @media (max-width: 1200px) {
   .header_order {
@@ -313,6 +314,9 @@
   font-weight: 700;
   line-height: normal;
   text-transform: uppercase;
+}
+.header_order:hover {
+  background: #e03131;
 }
 .header_menu {
   display: flex;
@@ -714,6 +718,11 @@
 @media (max-width: 1330px) {
   .services_title {
     font-size: 56px;
+  }
+}
+@media (max-width: 1214px) {
+  .services_title {
+    font-size: 48px;
   }
 }
 .services_title .red {
