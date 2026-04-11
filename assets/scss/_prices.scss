@@ -8,12 +8,25 @@
   position: relative;
   top: 0;
   z-index: 5;
+  margin-top: -45px;
+  @media (max-width: 768px) {
+    border-radius: 0;
+    padding: 30px 5px 90px;
+  }
   &::-webkit-scrollbar {
     display: none;
   }
   &_top {
     display: flex;
     justify-content: space-between;
+    gap: 20px;
+    @media (max-width: 768px) {
+      flex-direction: column;
+      gap: 10px;
+    }
+    .section_title {
+      flex: 0 0 auto;
+    }
     p {
       color: #292d32;
       font-family: "Manrope";
@@ -22,12 +35,24 @@
       font-weight: 400;
       line-height: 26px;
       max-width: 530px;
+      @media (max-width: 768px) {
+        font-size: 12px;
+        line-height: normal;
+      }
     }
   }
   &_items {
     display: flex;
     justify-content: space-between;
     margin-top: 68px;
+    @media (max-width: 1024px) {
+      flex-wrap: wrap;
+      gap: 30px 0;
+    }
+    @media (max-width: 768px) {
+      margin-top: 20px;
+      gap: 10px;
+    }
   }
   &_item {
     width: calc(33.33% - 19px);
@@ -39,6 +64,14 @@
     position: relative;
     cursor: pointer;
     transition: all 0.3s linear;
+    @media (max-width: 1024px) {
+      width: calc(50% - 15px);
+    }
+    @media (max-width: 768px) {
+      width: 100%;
+      padding: 20px;
+      border-radius: 15px;
+    }
     &_icon {
       display: flex;
       width: 40px;
@@ -50,6 +83,16 @@
       border: 1px solid rgba(255, 255, 255, 0);
       background: linear-gradient(180deg, #0c0c0c 0%, #3d3d3d 100%);
       transition: all 0.3s linear;
+      @media (max-width: 768px) {
+        display: none;
+      }
+    }
+    &_top {
+      img {
+        @media (max-width: 768px) {
+          display: none;
+        }
+      }
     }
     &:hover {
       box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.08);
@@ -76,6 +119,14 @@
       position: absolute;
       top: 45px;
       right: 0;
+      @media (max-width: 768px) {
+        position: static;
+        padding: 3px 10px;
+        border-radius: 5px;
+        margin-bottom: 7px;
+        display: block;
+        width: fit-content;
+      }
     }
     &_title {
       color: #0c0c0c;
@@ -85,6 +136,13 @@
       font-weight: 400;
       line-height: 28px;
       margin-top: 24px;
+      @media (max-width: 1285px) {
+        font-size: 26px;
+      }
+      @media (max-width: 768px) {
+        margin-top: 0;
+        font-size: 22px;
+      }
     }
     p {
       color: #828282;
@@ -95,6 +153,9 @@
       font-weight: 400;
       line-height: 20px;
       letter-spacing: 0%;
+      @media (max-width: 768px) {
+        font-size: 12px;
+      }
     }
     &_sum {
       color: #0c0c0c;
@@ -104,6 +165,11 @@
       font-weight: 400;
       line-height: 56px;
       margin-top: 32px;
+      @media (max-width: 768px) {
+        font-size: 24px;
+        margin-top: 10px;
+        line-height: normal;
+      }
     }
     &_body {
       display: flex;
@@ -112,6 +178,19 @@
       margin-top: 30px;
       padding-top: 30px;
       border-top: 1px solid #ededed;
+      @media (max-width: 768px) {
+        margin-top: 20px;
+        padding-top: 10px;
+        gap: 5px;
+      }
+      h4 {
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        @media (max-width: 768px) {
+          font-size: 17px;
+        }
+      }
       ul {
         display: flex;
         flex-direction: column;
@@ -121,6 +200,9 @@
           display: flex;
           align-items: center;
           gap: 8px;
+          @media (max-width: 768px) {
+            font-size: 12px;
+          }
         }
       }
     }
@@ -143,6 +225,9 @@
     line-height: 20px;
     padding: 12px 14px;
     transition: all 0.3s linear;
+    @media (max-width: 768px) {
+      margin-top: 13px;
+    }
     &:hover {
       border-radius: 5px;
       background: #e03131;

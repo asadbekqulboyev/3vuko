@@ -1,13 +1,17 @@
 .production {
   padding: 100px 0;
   position: relative;
-  top: 0;
-  min-height: 100vh;
-  z-index: 8;
   border-radius: 50px 50px 0 0;
   background: #fff;
   margin-top: -40px;
-
+  z-index: 8;
+  @media (max-width: 1024px) {
+    padding: 60px 5px;
+  }
+  @media (max-width: 556px) {
+    padding: 30px 5px 70px;
+    border-radius: 20px 20px 0 0;
+  }
   .section_title {
     display: block;
     max-width: 1098px;
@@ -22,16 +26,34 @@
     font-size: 16px;
     line-height: normal;
     margin-top: 20px;
+    @media (max-width: 768px) {
+      margin-top: 10px;
+      font-size: 12px;
+    }
   }
   &_items {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     margin-top: 70px;
+    @media (max-width: 1024px) {
+      gap: 20px 0;
+      margin-top: 50px;
+    }
+    @media (max-width: 556px) {
+      margin-top: 30px;
+      gap: 10px;
+    }
   }
   &_item {
     width: calc(33.33% - 10px);
     cursor: pointer;
+    @media (max-width: 1024px) {
+      width: calc(50% - 10px);
+    }
+    @media (max-width: 556px) {
+      width: 100%;
+    }
     &_top {
       width: 100%;
       position: relative;
@@ -48,10 +70,16 @@
     }
     &_body {
       margin-top: 20px;
+      @media (max-width: 556px) {
+        margin-top: 10px;
+      }
       p {
         line-height: normal;
         transition: all 0.3s linear;
         margin-top: 5px;
+        @media (max-width: 556px) {
+          font-size: 12px;
+        }
       }
     }
     &_title {
@@ -61,6 +89,13 @@
       font-weight: 700;
       line-height: normal;
       transition: all 0.3s linear;
+      @media (max-width: 1024px) {
+        font-size: 18px;
+      }
+      @media (max-width: 556px) {
+        font-size: 16px;
+      }
+
       &.last {
         width: calc(100% + 29px);
       }
@@ -89,6 +124,11 @@
     display: block;
     width: fit-content;
     transition: all 0.3s linear;
+    @media (max-width: 556px) {
+      width: 100%;
+      text-align: center;
+      margin-top: 30px;
+    }
     &:hover {
       color: #fff;
       background: #282828;
