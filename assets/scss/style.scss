@@ -116,6 +116,21 @@ main {
   position: absolute;
   left: 0;
   right: 0;
+  transition: all 0.2s linear;
+
+  &:hover,
+  &:focus-visible {
+    transform: translateX(0%) translateY(-4px);
+    box-shadow: 0 24px 48px rgba(0, 0, 0, 0.34);
+    background: #e03131;
+    color: #fff;
+    .studio_cta_icon {
+      background: #fff;
+      svg path {
+        stroke: #e03131;
+      }
+    }
+  }
 }
 
 .screen {

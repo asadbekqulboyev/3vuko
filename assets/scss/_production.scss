@@ -6,6 +6,8 @@
   z-index: 8;
   border-radius: 50px 50px 0 0;
   background: #fff;
+  margin-top: -40px;
+
   .section_title {
     display: block;
     max-width: 1098px;
@@ -29,6 +31,7 @@
   }
   &_item {
     width: calc(33.33% - 10px);
+    cursor: pointer;
     &_top {
       width: 100%;
       position: relative;
@@ -57,6 +60,11 @@
       line-height: normal;
       &.last {
         width: calc(100% + 29px);
+      }
+    }
+    &:hover {
+      .production_item_title {
+        color: #e03131;
       }
     }
   }

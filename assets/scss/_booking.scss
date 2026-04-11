@@ -238,6 +238,31 @@
         height: 50px;
         border-radius: 5px;
         border: 1px solid rgba(255, 255, 255, 0.2);
+        transition: all 0.3s linear;
+      }
+      li:nth-child(1) {
+        a:hover {
+          background: #25c23d;
+          svg path {
+            fill: #fff;
+          }
+        }
+      }
+      li:nth-child(2) {
+        a:hover {
+          background: #22b5ff;
+          svg path {
+            fill: #fff;
+          }
+        }
+      }
+      li:nth-child(3) {
+        a:hover {
+          background: #5700ff;
+          svg path {
+            fill: #fff;
+          }
+        }
       }
     }
   }
