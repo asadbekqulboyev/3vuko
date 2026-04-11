@@ -18,11 +18,17 @@
     width: calc(33.33% - 10px);
     border-radius: 10px;
     background: #fff;
+    text-decoration: none;
+    color: #0c0c0c;
+    transition: all 0.3s linear;
     img {
       width: 100%;
     }
     &_body {
       padding: 20px;
+      p {
+        margin-top: 10px;
+      }
     }
     &_date {
       color: #828282;
@@ -42,6 +48,13 @@
       text-decoration-skip-ink: auto;
       text-decoration-thickness: auto;
       text-underline-offset: auto;
+      transition: all 0.3s linear;
+    }
+    &:hover {
+      color: #e03131;
+      .news_item_title {
+        color: #e03131;
+      }
     }
   }
   .button {

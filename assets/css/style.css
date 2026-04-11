@@ -503,8 +503,7 @@
   display: flex;
   align-items: center;
   width: 100%;
-  position: sticky;
-  top: 0;
+  position: relative;
 }
 @media (max-width: 768px) {
   .hero {
@@ -577,7 +576,21 @@
   gap: 18px;
   flex: 0 0 auto;
   transition: all 1s linear;
-  background-repeat: no-repeat;
+  position: relative;
+  border-radius: 5px;
+  background: radial-gradient(76.16% 76.16% at 31.97% 19.67%, rgba(255, 173, 173, 0) 100%, rgba(255, 173, 173, 0) 69.79%, rgba(255, 173, 173, 0) 100%), #c21c1c;
+  overflow: hidden;
+}
+.hero_bottom .button::before {
+  animation: flash 2s linear infinite;
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle, rgba(255, 173, 173, 0.6), transparent 70%);
+  transform: rotate(0deg);
+  transition: transform 0.8s ease;
+  width: 100%;
+  height: 100%;
 }
 @media (max-width: 768px) {
   .hero_bottom .button {
@@ -586,8 +599,10 @@
   }
 }
 .hero_bottom .button:hover {
-  background-position: 100% 100%;
-  background-size: 280% 280%;
+  box-shadow: 0 0 20px rgba(255, 100, 100, 0.6);
+}
+.hero_bottom .button:hover::before {
+  transform: translate(180deg);
 }
 .hero_bottom .button img {
   animation: to_right 0.9s linear infinite alternate;
@@ -689,13 +704,21 @@
     transform: translateX(-5px);
   }
 }
+@keyframes flash {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    display: none;
+    transform: translateX(100%);
+  }
+}
 .services {
   position: relative;
-  min-height: 100vh;
   background: #000;
   display: flex;
   align-items: center;
-  padding: 100px 0;
+  padding: 100px 0 0;
   z-index: 2;
   overflow: hidden;
 }
@@ -831,11 +854,11 @@
   font-style: normal;
   font-weight: 700;
   line-height: normal;
-  position: absolute;
-  bottom: -45%;
+  position: relative;
   left: -20%;
   right: auto;
   z-index: -1;
+  height: 170px;
 }
 
 .projects {
@@ -1516,8 +1539,23 @@
   cursor: pointer;
   transition: all 0.3s linear;
 }
+.prices_item_icon {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  padding: 5px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  border: 1px solid rgba(255, 255, 255, 0);
+  background: linear-gradient(180deg, #0c0c0c 0%, #3d3d3d 100%);
+  transition: all 0.3s linear;
+}
 .prices_item:hover {
   box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.08);
+}
+.prices_item:hover .prices_item_icon {
+  background: #e03131;
 }
 .prices_item:first-child p {
   width: calc(100% + 22px);
@@ -1601,6 +1639,13 @@
   text-decoration: none;
   line-height: 20px;
   padding: 12px 14px;
+  transition: all 0.3s linear;
+}
+.prices_btn:hover {
+  border-radius: 5px;
+  background: #e03131;
+  box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0.32) inset;
+  color: #fff;
 }
 .prices_btn.red {
   border-radius: 5px;
@@ -1666,15 +1711,47 @@
   border: 1px solid #282828;
   background: #141414;
   flex: 1;
+  transition: all 0.2s linear;
+}
+.booking.last .booking_socials a img {
+  transition: all 0.2s linear;
+}
+.booking.last .booking_socials a:hover {
+  box-shadow: 0 0 15px #282828;
+}
+.booking.last .booking_socials a:hover img {
+  transform: translate(-4px, -4px);
 }
 .booking.last .booking_socials a:nth-child(2) {
   background: #21a2e3;
+  transition: all 0.2s linear;
+}
+.booking.last .booking_socials a:nth-child(2) img {
+  transition: all 0.2s linear;
+}
+.booking.last .booking_socials a:nth-child(2):hover {
+  box-shadow: 0 0 15px rgba(34, 181, 255, 0.5);
+}
+.booking.last .booking_socials a:nth-child(2):hover img {
+  transform: translate(-4px, -4px);
 }
 .booking.last .booking_socials a:last-child {
   background: #5009d8;
 }
 .booking.last .booking_socials a:last-child span {
   padding-right: 30px;
+}
+.booking.last .booking_socials a:last-child {
+  transition: all 0.2s linear;
+}
+.booking.last .booking_socials a:last-child img {
+  transition: all 0.2s linear;
+}
+.booking.last .booking_socials a:last-child:hover {
+  box-shadow: 0 0 15px #5009d8;
+}
+.booking.last .booking_socials a:last-child:hover img {
+  transform: translate(-4px, -4px);
 }
 .booking.last .booking_socials a span {
   display: block;
@@ -1992,6 +2069,8 @@
 }
 .production_item_body p {
   line-height: normal;
+  transition: all 0.3s linear;
+  margin-top: 5px;
 }
 .production_item_title {
   color: #0c0c0c;
@@ -1999,11 +2078,15 @@
   font-style: normal;
   font-weight: 700;
   line-height: normal;
+  transition: all 0.3s linear;
 }
 .production_item_title.last {
   width: calc(100% + 29px);
 }
 .production_item:hover .production_item_title {
+  color: #e03131;
+}
+.production_item:hover .production_item_body p {
   color: #e03131;
 }
 .production .button {
@@ -2048,12 +2131,18 @@
   width: calc(33.33% - 10px);
   border-radius: 10px;
   background: #fff;
+  text-decoration: none;
+  color: #0c0c0c;
+  transition: all 0.3s linear;
 }
 .news_item img {
   width: 100%;
 }
 .news_item_body {
   padding: 20px;
+}
+.news_item_body p {
+  margin-top: 10px;
 }
 .news_item_date {
   color: #828282;
@@ -2073,6 +2162,13 @@
   text-decoration-skip-ink: auto;
   text-decoration-thickness: auto;
   text-underline-offset: auto;
+  transition: all 0.3s linear;
+}
+.news_item:hover {
+  color: #e03131;
+}
+.news_item:hover .news_item_title {
+  color: #e03131;
 }
 .news .button {
   border-radius: 5px;
@@ -2180,6 +2276,7 @@
   --testimonial-gap: 24px;
   position: relative;
   z-index: 12;
+  margin-top: -45px;
 }
 .testimonials_top {
   display: flex;
@@ -2501,6 +2598,7 @@ body.is-locked {
   top: 0;
   z-index: 13;
   min-height: 100vh;
+  margin-top: -45px;
 }
 .faq .section_title {
   flex-wrap: wrap;
@@ -2792,10 +2890,6 @@ body.is-locked {
   font-family: "Buyan-regular";
   src: url(../fonts/BuyanRegular.ttf);
 }
-:root {
-  --header-h: 132px;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -2889,17 +2983,4 @@ main {
 }
 .ellipse_button:hover .studio_cta_icon svg path, .ellipse_button:focus-visible .studio_cta_icon svg path {
   stroke: #e03131;
-}
-
-.screen {
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
-}
-
-main {
-  scroll-snap-type: y mandatory;
-}
-
-.screen {
-  scroll-snap-align: start;
 }/*# sourceMappingURL=style.css.map */

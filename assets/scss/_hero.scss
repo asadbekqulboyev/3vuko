@@ -7,8 +7,7 @@
   display: flex;
   align-items: center;
   width: 100%;
-  position: sticky;
-  top: 0;
+  position: relative;
   @media (max-width: 768px) {
     padding: 0px 0 30px;
     align-items: flex-end;
@@ -71,14 +70,41 @@
       gap: 18px;
       flex: 0 0 auto;
       transition: all 1s linear;
-      background-repeat: no-repeat;
+      position: relative;
+      border-radius: 5px;
+      background:
+        radial-gradient(
+          76.16% 76.16% at 31.97% 19.67%,
+          rgba(255, 173, 173, 0) 100%,
+          rgba(255, 173, 173, 0) 69.79%,
+          rgba(255, 173, 173, 0) 100%
+        ),
+        #c21c1c;
+      overflow: hidden;
+      &::before {
+        animation: flash 2s linear infinite;
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(
+          circle,
+          rgba(255, 173, 173, 0.6),
+          transparent 70%
+        );
+        transform: rotate(0deg);
+        transition: transform 0.8s ease;
+        width: 100%;
+        height: 100%;
+      }
       @media (max-width: 768px) {
         width: 100%;
         justify-content: center;
       }
       &:hover {
-        background-position: 100% 100%;
-        background-size: 280% 280%;
+        box-shadow: 0 0 20px rgba(255, 100, 100, 0.6);
+        &::before {
+          transform: translate(180deg);
+        }
       }
       img {
         animation: to_right 0.9s linear infinite alternate;
@@ -166,5 +192,14 @@
   }
   to {
     transform: translateX(-5px);
+  }
+}
+@keyframes flash {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    display: none;
+    transform: translateX(100%);
   }
 }

@@ -39,8 +39,23 @@
     position: relative;
     cursor: pointer;
     transition: all 0.3s linear;
+    &_icon {
+      display: flex;
+      width: 40px;
+      height: 40px;
+      padding: 5px;
+      justify-content: center;
+      align-items: center;
+      border-radius: 100px;
+      border: 1px solid rgba(255, 255, 255, 0);
+      background: linear-gradient(180deg, #0c0c0c 0%, #3d3d3d 100%);
+      transition: all 0.3s linear;
+    }
     &:hover {
       box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.08);
+      .prices_item_icon {
+        background: #e03131;
+      }
     }
     &:first-child {
       p {
@@ -127,6 +142,13 @@
     text-decoration: none;
     line-height: 20px;
     padding: 12px 14px;
+    transition: all 0.3s linear;
+    &:hover {
+      border-radius: 5px;
+      background: #e03131;
+      box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0.32) inset;
+      color: #fff;
+    }
     &.red {
       border-radius: 5px;
       background: #e03131;

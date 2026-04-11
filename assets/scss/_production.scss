@@ -50,6 +50,8 @@
       margin-top: 20px;
       p {
         line-height: normal;
+        transition: all 0.3s linear;
+        margin-top: 5px;
       }
     }
     &_title {
@@ -58,12 +60,16 @@
       font-style: normal;
       font-weight: 700;
       line-height: normal;
+      transition: all 0.3s linear;
       &.last {
         width: calc(100% + 29px);
       }
     }
     &:hover {
       .production_item_title {
+        color: #e03131;
+      }
+      .production_item_body p {
         color: #e03131;
       }
     }

@@ -31,9 +31,6 @@
   font-family: "Buyan-regular";
   src: url(../fonts/BuyanRegular.ttf);
 }
-:root {
-  --header-h: 132px;
-}
 * {
   margin: 0;
   padding: 0;
@@ -49,9 +46,7 @@ body {
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
 }
-// .wrapper {
-//   overflow: hidden;
-// }
+
 .container {
   width: 100%;
   max-width: 1300px;
@@ -131,16 +126,4 @@ main {
       }
     }
   }
-}
-
-.screen {
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
-}
-main {
-  scroll-snap-type: y mandatory;
-}
-
-.screen {
-  scroll-snap-align: start;
 }

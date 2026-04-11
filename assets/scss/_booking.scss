@@ -52,13 +52,43 @@
         border: 1px solid #282828;
         background: #141414;
         flex: 1;
+        transition: all 0.2s linear;
+        img {
+          transition: all 0.2s linear;
+        }
+        &:hover {
+          box-shadow: 0 0 15px #282828;
+          img {
+            transform: translate(-4px, -4px);
+          }
+        }
         &:nth-child(2) {
           background: #21a2e3;
+          transition: all 0.2s linear;
+          img {
+            transition: all 0.2s linear;
+          }
+          &:hover {
+            box-shadow: 0 0 15px rgba(34, 181, 255, 0.5);
+            img {
+              transform: translate(-4px, -4px);
+            }
+          }
         }
         &:last-child {
           background: #5009d8;
           span {
             padding-right: 30px;
+          }
+          transition: all 0.2s linear;
+          img {
+            transition: all 0.2s linear;
+          }
+          &:hover {
+            box-shadow: 0 0 15px #5009d8;
+            img {
+              transform: translate(-4px, -4px);
+            }
           }
         }
         span {
