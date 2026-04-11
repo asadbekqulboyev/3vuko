@@ -16,14 +16,19 @@
 
   .section_title {
     flex-wrap: wrap;
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   .section_title p {
-    color: #0c0c0c;
-  }
-
-  .section_title span {
-    color: #e03131;
+    color: #828282;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    @media (max-width: 768px) {
+      font-size: 14px;
+    }
   }
 
   &_control {
@@ -93,6 +98,10 @@
 
   &_slider {
     overflow: hidden;
+    @media (max-width: 768px) {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
   }
 
   &_slider .swiper-wrapper {
@@ -112,6 +121,9 @@
     scroll-snap-align: start;
     // padding-bottom:;
     min-height: fit-content;
+    @media (max-width: 768px) {
+      padding: 20px;
+    }
   }
 
   &_card_head {
@@ -119,6 +131,10 @@
     align-items: center;
     gap: 27px;
     margin-bottom: 17px;
+    @media (max-width: 768px) {
+      gap: 10px;
+      margin-bottom: 15px;
+    }
   }
 
   &_avatar {
@@ -162,6 +178,9 @@
     gap: 20px;
     margin-bottom: 18px;
     flex-wrap: wrap;
+    @media (max-width: 768px) {
+      margin-bottom: 15px;
+    }
   }
 
   &_stars {
@@ -193,6 +212,14 @@
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 5;
     margin-bottom: 31px;
+    @media (max-width: 768px) {
+      margin-bottom: 15px;
+      font-size: 12px;
+      display: -webkit-box;
+      overflow: hidden;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 3;
+    }
   }
 
   &_card.is-expanded &_text {
@@ -338,16 +365,41 @@ body.is-locked {
     }
   }
 }
+@media (max-width: 768px) {
+  .testimonials {
+    &_top {
+      margin-bottom: 40px;
+    }
+
+    &_control {
+      gap: 12px;
+      display: none;
+    }
+
+    &_btn {
+      width: 48px;
+      height: 48px;
+    }
+
+    &_card {
+      min-height: 290px;
+      padding: 22px;
+    }
+  }
+}
 
 @media (max-width: 639px) {
   .testimonials {
-    padding: 64px 0;
-    border-radius: 32px 32px 0 0;
+    padding: 38px 0 94px;
+    border-radius: 20px 20px 0 0;
     --testimonial-gap: 16px;
-
     .section_title {
-      font-size: 42px;
-      gap: 8px;
+      svg {
+        width: 29px;
+      }
+    }
+    &_progress {
+      margin-top: 40px;
     }
 
     &_card {
@@ -356,7 +408,7 @@ body.is-locked {
     }
 
     &_name {
-      font-size: 17px;
+      font-size: 16px;
     }
 
     &_text {
@@ -364,7 +416,9 @@ body.is-locked {
     }
 
     &_more {
-      font-size: 22px;
+      font-size: 16px;
+      font-weight: 700;
+      padding: 12px;
     }
 
     &_modal {

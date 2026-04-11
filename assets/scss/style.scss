@@ -36,6 +36,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+.wrapper {
+  overflow: hidden;
+}
 body {
   font-family: "Manrope";
   font-weight: 400;
@@ -87,6 +90,15 @@ main {
   font-weight: 700;
   line-height: normal;
   gap: 10px;
+  @media (max-width: 1200px) {
+    font-size: 48px;
+  }
+  @media (max-width: 1024px) {
+    font-size: 40px;
+  }
+  @media (max-width: 768px) {
+    font-size: 36px;
+  }
 }
 .ellipse_button {
   width: 150px;

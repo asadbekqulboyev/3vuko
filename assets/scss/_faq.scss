@@ -5,8 +5,10 @@
   position: relative;
   top: 0;
   z-index: 13;
-  min-height: 100vh;
   margin-top: -45px;
+  @media (max-width: 768px) {
+    padding: 30px 5px 40px;
+  }
   .section_title {
     flex-wrap: wrap;
   }
@@ -35,6 +37,9 @@
     background: transparent;
     text-align: left;
     cursor: pointer;
+    @media (max-width: 610px) {
+      align-items: center;
+    }
   }
 
   &_order {
@@ -69,6 +74,9 @@
     transition:
       background 0.2s ease,
       transform 0.2s ease;
+    @media (max-width: 768px) {
+      display: none;
+    }
   }
 
   &_item.is-active &_toggle {
@@ -129,38 +137,48 @@
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .faq {
-    padding: 72px 0 84px;
-
-    .section_title {
-      font-size: 40px;
-      margin-bottom: 24px;
-    }
-
+    padding: 30px 5px 40px;
+    border-radius: 20px 20px 0 0;
     &_trigger {
-      grid-template-columns: 40px 1fr;
-      gap: 14px;
+      padding: 15px 0;
+      display: flex;
+      align-items: center;
     }
-
-    &_toggle {
-      grid-column: 2;
-      justify-self: end;
-      margin-top: 10px;
+    &_order {
+      flex: 0 0 auto;
+      width: 30px;
+      height: 20px;
+      padding: 9px 12px;
+      border-radius: 5px;
+      font-size: 12px;
     }
-
+    &_items {
+      margin-top: 30px;
+    }
     &_title {
       font-size: 18px;
-      padding-top: 5px;
     }
 
     &_content {
-      padding: 0 0 0 54px;
+      padding: 0;
     }
 
     &_description {
       font-size: 15px;
       line-height: 24px;
+    }
+  }
+}
+@media (max-width: 556px) {
+  .faq {
+    &_title {
+      font-size: 14px;
+    }
+    &_description {
+      font-size: 12px;
+      line-height: 22px;
     }
   }
 }

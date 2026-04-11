@@ -10,6 +10,9 @@
     background: #0c0c0c;
     min-height: 100vh;
     padding: 100px 0;
+    @media (max-width: 768px) {
+      padding: 40px 0 30px;
+    }
     .section_title {
       display: block;
       span {
@@ -18,6 +21,13 @@
     }
     p {
       max-width: 530px;
+      @media (max-width: 1024px) {
+        max-width: 320px;
+      }
+      @media (max-width: 768px) {
+        max-width: 100%;
+        font-size: 12px;
+      }
     }
     .booking_form_title {
       width: 100%;
@@ -27,6 +37,10 @@
       flex-direction: column;
       gap: 20px;
       margin-top: 0;
+      width: calc(50% - 10px);
+      @media (max-width: 992px) {
+        width: 100%;
+      }
       .booking_form {
         width: 100%;
       }
@@ -36,10 +50,23 @@
       width: calc(50% - 10px);
       flex-direction: column;
       gap: 20px;
+      @media (max-width: 992px) {
+        width: 100%;
+      }
+      .booking_form_title {
+        @media (max-width: 768px) {
+          display: none;
+        }
+      }
+
       .booking_social_items {
         display: flex;
         gap: 20px;
         height: 100%;
+        @media (max-width: 768px) {
+          flex-direction: column;
+          gap: 15px;
+        }
       }
       a {
         display: flex;
@@ -53,6 +80,14 @@
         background: #141414;
         flex: 1;
         transition: all 0.2s linear;
+        @media (max-width: 992px) {
+          min-height: 320px;
+        }
+        @media (max-width: 768px) {
+          min-height: 70px;
+          flex-direction: row;
+          align-items: center;
+        }
         img {
           transition: all 0.2s linear;
         }
@@ -108,10 +143,24 @@
     display: flex;
     justify-content: space-between;
     margin-top: 50px;
+    @media (max-width: 992px) {
+      flex-direction: column;
+      gap: 20px;
+      justify-content: center;
+    }
+    @media (max-width: 768px) {
+      gap: 15px;
+      margin-top: 30px;
+    }
   }
   &_top {
     display: flex;
     justify-content: space-between;
+    gap: 20px;
+    @media (max-width: 768px) {
+      flex-direction: column;
+      gap: 15px;
+    }
     p {
       color: #828282;
       font-size: 16px;
@@ -119,6 +168,10 @@
       font-weight: 400;
       line-height: normal;
       max-width: 420px;
+      @media (max-width: 1024px) {
+        font-size: 14px;
+      }
+
       span {
         color: #fff;
       }
@@ -193,11 +246,17 @@
     font-weight: 400;
     line-height: normal;
     margin-top: 30px;
+    @media (max-width: 768px) {
+      display: none;
+    }
   }
   &_content {
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
+    @media (max-width: 768px) {
+      gap: 15px;
+    }
   }
   &_form {
     width: calc(50% - 10px);
@@ -205,10 +264,17 @@
     border: 1px solid #2b2b2b;
     background: #141414;
     padding: 30px;
+    @media (max-width: 768px) {
+      padding: 20px;
+    }
     &_input {
       display: flex;
       flex-direction: column;
       gap: 10px;
+      width: 70%;
+      @media (max-width: 768px) {
+        width: 100%;
+      }
       span {
         color: #828282;
         font-family: "Manrope";
@@ -216,10 +282,17 @@
         font-style: normal;
         font-weight: 400;
         line-height: normal;
+        @media (max-width: 768px) {
+          font-size: 14px;
+        }
       }
       &.full {
+        width: 100%;
         max-width: 100%;
         margin-top: 20px;
+        @media (max-width: 768px) {
+          margin-top: 15px;
+        }
         input {
           width: 100%;
         }
@@ -236,7 +309,9 @@
       font-weight: 400;
       line-height: normal;
       padding: 15.5px 20px;
-      width: 310px;
+      @media (max-width: 768px) {
+        padding: 10px 20px;
+      }
     }
     &_first {
       display: flex;
@@ -248,6 +323,18 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
+    &.desctop {
+      @media (max-width: 768px) {
+        display: none;
+      }
+    }
+    &.mobile {
+      display: none !important;
+      @media (max-width: 768px) {
+        margin-top: 20px;
+        display: flex !important;
+      }
+    }
     span {
       color: #828282;
       font-family: "Manrope";
@@ -299,10 +386,10 @@
   .checkbox_content {
     display: flex;
     gap: 10px;
-    justify-content: space-between;
     cursor: pointer;
     margin-top: 20px;
     align-items: center;
+
     .custom_checkbox {
       width: 20px;
       height: 20px;
@@ -335,6 +422,9 @@
       font-style: normal;
       font-weight: 300;
       line-height: normal;
+      @media (max-width: 768px) {
+        font-size: 10px;
+      }
       a {
         color: #fff;
       }
@@ -353,6 +443,11 @@
     width: 100%;
     padding: 10px;
     margin-top: 50px;
+    @media (max-width: 768px) {
+      font-size: 20px;
+      padding: 14px;
+      margin-top: 20px;
+    }
     svg {
       transition: all 0.2s linear;
     }
