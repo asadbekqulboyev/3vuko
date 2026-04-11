@@ -552,8 +552,12 @@
 }
 @media (max-width: 768px) {
   .hero_title {
+    word-wrap: break-word;
     font-size: 50px;
     margin-bottom: 10px;
+  }
+  .hero_title br {
+    display: none;
   }
 }
 .hero_title span {
@@ -572,6 +576,9 @@
     font-size: 14px;
     line-height: normal;
     margin-bottom: 38px;
+  }
+  .hero_description br {
+    display: none;
   }
 }
 .hero_bottom {
@@ -600,6 +607,13 @@
   border-radius: 5px;
   background: radial-gradient(76.16% 76.16% at 31.97% 19.67%, rgba(255, 173, 173, 0) 100%, rgba(255, 173, 173, 0) 69.79%, rgba(255, 173, 173, 0) 100%), #c21c1c;
   overflow: hidden;
+}
+@media (max-width: 768px) {
+  .hero_bottom .button {
+    font-size: 22px;
+    padding: 13px;
+    gap: 10px;
+  }
 }
 .hero_bottom .button::before {
   animation: flash 2s linear infinite;
