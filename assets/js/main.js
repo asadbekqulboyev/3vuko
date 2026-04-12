@@ -78,38 +78,79 @@ const pauseIcon = `
 `;
 
 // Studio accordion for mobile
+// function initStudioAccordion() {
+//   if (window.innerWidth > 768) return;
+
+//   const studioItems = document.querySelectorAll(".studio_item");
+
+//   studioItems.forEach((item) => {
+//     const trigger = item.querySelector(".studio_trigger");
+//     const description = trigger.getAttribute("data-description");
+
+//     trigger.addEventListener("click", (e) => {
+//       e.preventDefault();
+
+//       // Close other items
+//       studioItems.forEach((otherItem) => {
+//         if (otherItem !== item) {
+//           otherItem.classList.remove("is-active");
+//         }
+//       });
+
+//       // Toggle current item
+//       item.classList.toggle("is-active");
+
+//       // Update image
+//       if (item.classList.contains("is-active")) {
+//         const image = trigger.getAttribute("data-image");
+//         const alt = trigger.getAttribute("data-alt");
+//         const studioImage = document.querySelector("[data-studio-image]");
+
+//         if (studioImage) {
+//           studioImage.src = image;
+//           studioImage.alt = alt;
+//         }
+//       }
+//     });
+//   });
+// }
+
+// document.addEventListener("DOMContentLoaded", () => {
+//   initStudioAccordion();
+// });
+
+// window.addEventListener("resize", () => {
+//   initStudioAccordion();
+// });
+
 function initStudioAccordion() {
+  if (window.innerWidth > 768) return;
+
   const studioItems = document.querySelectorAll(".studio_item");
-  const isMobile = window.innerWidth <= 768;
 
   studioItems.forEach((item) => {
     const trigger = item.querySelector(".studio_trigger");
 
-    // Remove existing listeners to prevent duplicates
+    // eski eventni o‘chirish uchun clone qilamiz
     const newTrigger = trigger.cloneNode(true);
-    trigger.replaceWith(newTrigger);
+    trigger.parentNode.replaceChild(newTrigger, trigger);
 
-    const updatedTrigger = item.querySelector(".studio_trigger");
-
-    updatedTrigger.addEventListener("click", (e) => {
+    newTrigger.addEventListener("click", (e) => {
       e.preventDefault();
 
-      if (!isMobile) return;
+      const isActive = item.classList.contains("is-active");
 
-      // Close all other items
+      // Close all items
       studioItems.forEach((otherItem) => {
-        if (otherItem !== item) {
-          otherItem.classList.remove("is-active");
-        }
+        otherItem.classList.remove("is-active");
       });
 
-      // Toggle current item
-      item.classList.toggle("is-active");
+      // Toggle current (faqat yopiq bo‘lsa ochiladi)
+      if (!isActive) {
+        item.classList.add("is-active");
 
-      // Update image when expanded
-      if (item.classList.contains("is-active")) {
-        const image = updatedTrigger.getAttribute("data-image");
-        const alt = updatedTrigger.getAttribute("data-alt");
+        const image = newTrigger.getAttribute("data-image");
+        const alt = newTrigger.getAttribute("data-alt");
         const studioImage = document.querySelector("[data-studio-image]");
 
         if (studioImage) {
