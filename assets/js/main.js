@@ -27,6 +27,7 @@ const musicData = [
     title: "Братья Грим - Лето (Remix)",
     author: "Аранжировка",
     src: "./assets/audio/music.mp3",
+    image: "./assets/images/music_image1.png",
   },
   {
     id: 2,
@@ -34,6 +35,7 @@ const musicData = [
     title: "Кравц - Есть как есть (feat. Нигатив)",
     author: "Запись, сведение",
     src: "audio/audio-2.mp3",
+    image: "./assets/images/music_image.png",
   },
   {
     id: 3,
@@ -41,6 +43,7 @@ const musicData = [
     title: "Д. Клявер - Удача найдет (Remix)",
     author: "Аранжировка",
     src: "audio/audio-3.mp3",
+    image: "./assets/images/music_image2.png",
   },
   {
     id: 4,
@@ -48,6 +51,7 @@ const musicData = [
     title: "Stepski, B.Junkie - На Созерцании",
     author: "Запись, сведение",
     src: "audio/audio-4.mp3",
+    image: "./assets/images/music_image.png",
   },
   {
     id: 5,
@@ -55,6 +59,7 @@ const musicData = [
     title: "Dina Mongo - Слезы-Вода",
     author: "Аранж., запись, сведение",
     src: "audio/audio-5.mp3",
+    image: "./assets/images/music_image.png",
   },
 ];
 const musicList = document.getElementById("musicList");
@@ -71,6 +76,58 @@ const pauseIcon = `
     <path d="M9.33301 4.00016C9.33301 2.74308 9.33301 2.11454 9.72353 1.72402C10.1141 1.3335 10.7426 1.3335 11.9997 1.3335C13.2568 1.3335 13.8853 1.3335 14.2758 1.72402C14.6663 2.11454 14.6663 2.74308 14.6663 4.00016V12.0002C14.6663 13.2572 14.6663 13.8858 14.2758 14.2763C13.8853 14.6668 13.2568 14.6668 11.9997 14.6668C10.7426 14.6668 10.1141 14.6668 9.72353 14.2763C9.33301 13.8858 9.33301 13.2572 9.33301 12.0002V4.00016Z" fill="white"/>
   </svg>
 `;
+
+// Studio accordion for mobile
+function initStudioAccordion() {
+  const studioItems = document.querySelectorAll(".studio_item");
+  const isMobile = window.innerWidth <= 768;
+
+  studioItems.forEach((item) => {
+    const trigger = item.querySelector(".studio_trigger");
+
+    // Remove existing listeners to prevent duplicates
+    const newTrigger = trigger.cloneNode(true);
+    trigger.replaceWith(newTrigger);
+
+    const updatedTrigger = item.querySelector(".studio_trigger");
+
+    updatedTrigger.addEventListener("click", (e) => {
+      e.preventDefault();
+
+      if (!isMobile) return;
+
+      // Close all other items
+      studioItems.forEach((otherItem) => {
+        if (otherItem !== item) {
+          otherItem.classList.remove("is-active");
+        }
+      });
+
+      // Toggle current item
+      item.classList.toggle("is-active");
+
+      // Update image when expanded
+      if (item.classList.contains("is-active")) {
+        const image = updatedTrigger.getAttribute("data-image");
+        const alt = updatedTrigger.getAttribute("data-alt");
+        const studioImage = document.querySelector("[data-studio-image]");
+
+        if (studioImage) {
+          studioImage.src = image;
+          studioImage.alt = alt;
+        }
+      }
+    });
+  });
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  initStudioAccordion();
+});
+
+window.addEventListener("resize", () => {
+  initStudioAccordion();
+});
 
 const soundIcon = `
   <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
@@ -91,15 +148,21 @@ function formatTime(seconds) {
 }
 
 function setDefaultMusicItemState(leftElement, number) {
-  leftElement.innerHTML = `<span class="music_index">${number}</span>`;
+  // Only update for desktop - on mobile button stays static
+  if (window.innerWidth > 768) {
+    leftElement.innerHTML = `<span class="music_index">${number}</span>`;
+  }
 }
 
 function setActiveMusicItemState(leftElement) {
-  leftElement.innerHTML = `
+  // Only update for desktop - on mobile button stays static
+  if (window.innerWidth > 768) {
+    leftElement.innerHTML = `
     <button class="music_play_btn" type="button" aria-label="pause">
       ${pauseIcon}
     </button>
   `;
+  }
 }
 
 function resetMusicItem(item) {
@@ -114,7 +177,7 @@ function resetMusicItem(item) {
 
   item.classList.remove("is_active");
   setDefaultMusicItemState(left, number);
-  sound.innerHTML = "";
+  // sound icon endi HTML da statick
   progress.style.width = "0%";
   time.textContent = formatTime(duration);
 }
@@ -125,7 +188,27 @@ function activateMusicItem(item) {
 
   item.classList.add("is_active");
   setActiveMusicItemState(left);
-  sound.innerHTML = soundIcon;
+  // sound icon endi HTML da statick
+
+  // Update desktop cover image and number
+  updateMusicCover(item);
+}
+
+function updateMusicCover(item) {
+  if (window.innerWidth <= 768) return; // Only update on desktop
+
+  const coverImg = document.querySelector(".music_cover");
+  const coverNumber = document.querySelector(".music_cover_number");
+  const itemImg = item.querySelector(".music_item_image");
+  const itemNumber = item.querySelector(".music_item_number");
+
+  if (coverImg && itemImg) {
+    coverImg.src = itemImg.src;
+  }
+
+  if (coverNumber && itemNumber) {
+    coverNumber.textContent = itemNumber.textContent;
+  }
 }
 
 function stopCurrentAudio() {
@@ -148,6 +231,10 @@ function createMusicItem(track) {
   audio.preload = "metadata";
 
   item.innerHTML = `
+    <div class="music_item_cover">
+      <img src="${track.image}" alt="${track.title}" class="music_item_image">
+      <div class="music_item_number">${track.number}</div>
+    </div>
     <div class="music_row">
       <div class="music_item_left">
         <span class="music_index">${track.number}</span>
@@ -238,14 +325,109 @@ function createMusicItem(track) {
   return item;
 }
 
+function setupMusicItems() {
+  const musicItems = document.querySelectorAll(".music_item");
+
+  musicItems.forEach((item) => {
+    const number = item.dataset.number;
+    const trackData = musicData.find((track) => track.number === number);
+
+    if (!trackData) return;
+
+    const audio = new Audio(trackData.src);
+    audio.preload = "metadata";
+
+    const left = item.querySelector(".music_item_left");
+    const time = item.querySelector(".music_time");
+    const progressBar = item.querySelector(".music_progress_bar");
+    const progressCurrent = item.querySelector(".music_progress_current");
+
+    audio.addEventListener("loadedmetadata", () => {
+      item.dataset.duration = audio.duration;
+      time.textContent = formatTime(audio.duration);
+    });
+
+    audio.addEventListener("timeupdate", () => {
+      if (!audio.duration) return;
+
+      const percent = (audio.currentTime / audio.duration) * 100;
+      progressCurrent.style.width = `${percent}%`;
+      time.textContent = formatTime(audio.currentTime);
+    });
+
+    audio.addEventListener("ended", () => {
+      resetMusicItem(item);
+
+      if (currentAudio === audio) {
+        currentAudio = null;
+        currentMusicItem = null;
+      }
+    });
+
+    const handlePlayClick = () => {
+      const isSameAudio = currentAudio === audio;
+
+      if (isSameAudio && !audio.paused) {
+        audio.pause();
+        resetMusicItem(item);
+        currentAudio = null;
+        currentMusicItem = null;
+        return;
+      }
+
+      if (currentAudio && currentAudio !== audio) {
+        stopCurrentAudio();
+      }
+
+      activateMusicItem(item);
+      currentAudio = audio;
+      currentMusicItem = item;
+      audio.play();
+    };
+
+    left.addEventListener("click", handlePlayClick);
+
+    const playBtn = item.querySelector(".music_play_btn");
+    if (playBtn) {
+      playBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        handlePlayClick();
+      });
+    }
+
+    item.addEventListener("click", (event) => {
+      if (event.target !== progressBar && !progressBar.contains(event.target)) {
+        handlePlayClick();
+      }
+    });
+
+    progressBar.addEventListener("click", (event) => {
+      if (!audio.duration) return;
+
+      const rect = progressBar.getBoundingClientRect();
+      const offsetX = event.clientX - rect.left;
+      const percent = offsetX / rect.width;
+
+      audio.currentTime = audio.duration * percent;
+
+      if (currentAudio !== audio) {
+        if (currentAudio && currentAudio !== audio) {
+          stopCurrentAudio();
+        }
+
+        activateMusicItem(item);
+        currentAudio = audio;
+        currentMusicItem = item;
+        audio.play();
+      }
+    });
+  });
+}
+
 function renderMusicList() {
   if (!musicList) return;
-
-  musicList.innerHTML = "";
-
-  musicData.forEach((track) => {
-    musicList.appendChild(createMusicItem(track));
-  });
+  // Static items allaqachon HTML da mavjud
+  setupMusicItems();
 }
 
 function setupGalleryMarquee() {
