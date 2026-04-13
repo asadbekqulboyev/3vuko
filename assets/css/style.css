@@ -3946,6 +3946,9 @@ body.is-locked {
   gap: 16px;
   list-style: none;
 }
+.footer_item_social.mobile {
+  display: none;
+}
 @media (max-width: 768px) {
   .footer_item_social.mobile {
     display: flex;
